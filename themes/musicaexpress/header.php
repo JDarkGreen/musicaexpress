@@ -45,12 +45,105 @@
 	<?php wp_head(); ?>
 </head>
 
+<?php
+/*
+ * Extraer todas las opciones de personalización
+ */ 
+$options  = get_option("theme_settings");
+
+/*
+ * Comprobar si esta desplegada la barra de Navegación
+ */ 
+$admin_bar = is_admin_bar_showing() ? 'mainHeader__active-bar' : '';
+
+/*
+ * Extraemos el logo de las opciones del tema
+ */ 
+$logo_theme_url = get_header_image();
+$logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.jpg';
+
+?>
+
 
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
+
+		<div class="wrapperContainer">
+
+			<!-- Información de empresa -->
+			<div id="information-top" class="pull-xs-right">
+				<?php  
+					/*
+					 * Número de Celular
+					 */
+					if( isset($options['theme_cel_text_1']) ): ?>
+
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+					<span><?= ' ' . $options['theme_cel_text_1']; ?></span>
+				<?php endif;
+
+					/*
+					 * Número de Casa
+					 */
+					if( isset($options['theme_phone_text_1']) ): ?>
+					<span><?= $options['theme_phone_text_1']; ?></span>
+				<?php
+					endif;
+				?>
+			</div> <!-- /.information-top -->
+
+			<!-- LIMPIAR FLOATS --> <div class="clearfix"></div>
+
+			<!-- Menu Header -->
+			<section class="flexible justify-center align-baseline">
+
+				<!-- Menu Left -->
+				<div id="nav-top-left-menu" class="menu-top-header">
+					<?php 
+						wp_nav_menu(
+							array(
+							'menu_class'     => '',
+							'theme_location' => 'top-left-menu'
+						));
+					?>
+				</div> <!-- /nav-top-left-menu-->
+
+				<!-- Logo -->
+				<h1 id="main-logo">
+					<a href="<?= site_url(); ?>">
+						<img src="<?= $logo_theme_url; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
+					</a>
+				</h1> <!-- /.mainLogo -->
+
+				<!-- Menu Right -->
+				<div id="nav-top-right-menu" class="menu-top-header">
+					<?php 
+						wp_nav_menu(
+							array(
+							'menu_class'     => '',
+							'theme_location' => 'top-right-menu'
+						));
+					?>
+				</div> <!-- /nav-top-right-menu-->
+
+			</section>  <!--  -->
+			
+		</div> <!-- /.wrapperContainer -->
+
+		<!-- Main Navigation -->
+		<nav id="main-navigation" class="mainNavigation text-xs-center text-uppercase">
+			<?php 
+				/*
+				 * Import template main navigation
+				 */
+				if( stream_resolve_include_path('partials/header/main-navigation.php') ): 
+					include('partials/header/main-navigation.php');
+				endif;
+			?>
+		</nav> <!-- /#main-navigation -->
 
 	</header><!-- .site-header -->
 

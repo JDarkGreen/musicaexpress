@@ -1,0 +1,39 @@
+
+/*-----------------------------------------------------
+* ARCHIVO CSS MAESTRO INCLUYE TODAS
+* LAS FUENTES EMPLEADAS PARA LA WEB
+*------------------------------------------------------*/
+
+/*
+ * Helvetica Condensed
+ */
+@font-face 
+{
+  font-family: 'Helvetica-Condensed-Light-Light';
+  src: url('../../fonts/helvetica/HCL/HCL.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/helvetica/HCL/HCL.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/helvetica/HCL/HCL.woff2') format('woff2'), /* Modern Browsers */
+    url('../../fonts/helvetica/HCL/HCL.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/helvetica/HCL/HCL.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/helvetica/HCL/HCL.svg') format('svg'); /* Legacy iOS */  
+	font-weight: normal;
+	font-style : normal;
+}
+
+
+/*
+ * Helvetica 87 Condensed Heavy
+ */
+@font-face 
+{
+  font-family: 'Hel87CondensedHeavy';
+  src: url('../../fonts/helvetica/H87HC/H87HC.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/helvetica/H87HC/H87HC.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/helvetica/H87HC/H87HC.woff2') format('woff2'), /* Modern Browsers */
+    url('../../fonts/helvetica/H87HC/H87HC.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/helvetica/H87HC/H87HC.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/helvetica/H87HC/H87HC.svg') format('svg'); /* Legacy iOS */  
+	font-weight: normal;
+	font-style : normal;
+}
+

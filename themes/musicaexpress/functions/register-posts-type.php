@@ -35,6 +35,35 @@ function create_post_type()
 	register_post_type( 'slider-home' , $args  );
 
 
+	/*|----- INSTRUMENTOS ----------------------|*/
+	
+	$labels_instruments = array(
+		'name'               => __('Instrumentos'),
+		'singular_name'      => __('Instrumento'),
+		'add_new'            => __('Nuevo Instrumento'),
+		'add_new_item'       => __('Agregar nuevo Instrumento Principal'),
+		'edit_item'          => __('Editar Instrumento'),
+		'view_item'          => __('Ver Instrumento'),
+		'search_items'       => __('Buscar Instrumento'),
+		'not_found'          => __('Instrumento no encontrado'),
+		'not_found_in_trash' => __('Instrumento no encontrado en la papelera'),
+	);
+
+	$args_instruments = array(
+		'labels'      => $labels_instruments,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => true,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
+		'show_ui' => true,
+		'taxonomies'  => array('post-tag'),
+		'menu_icon'   => 'dashicons-format-audio',
+	);
+	
+	#INSTRUMENTOS
+	register_post_type( 'type_instruments' , $args_instruments );
+
+
 
 
 	flush_rewrite_rules();

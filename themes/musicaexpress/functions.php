@@ -38,6 +38,25 @@ require('functions/constants.php');
 /* 	Archivos de Condiguración en el Administrador */
 /*******************************************************************/
 
+/*----------------------------------------------------------------------
+ * Setear scripts archvos css y javascript de la administracion del tema
+ *---------------------------------------------------------------------*/
+//css
+if( stream_resolve_include_path('admin/assets/custom-styles.php') ):
+  require('admin/assets/custom-styles.php');
+endif;
+
+//javascript
+if( stream_resolve_include_path('admin/assets/custom-scripts.php') ):
+  require('admin/assets/custom-scripts.php');
+endif;
+
+/*------------------------------------------------------------------
+ * Opciones del tema
+ *-----------------------------------------------------------------*/
+if( stream_resolve_include_path('admin/assets/custom-scripts.php') ):
+  include('admin/theme-customizer-modal.php');
+endif;
 
 
 /*******************************************************************/
@@ -47,15 +66,31 @@ require('functions/constants.php');
 /*--------------------------------------------
  * Registrar Menus
 *--------------------------------------------*/
-if( file_exists('functions/register-menu.php') ):
+if( stream_resolve_include_path('functions/register-menu.php') ):
   include('functions/register-menu.php');
 endif;
+
 
 /*---------------------------------------------
 /* Agregando nuevos tipos de post
 *--------------------------------------------*/
-if( file_exists('functions/register-posts-type.php') ):
+if( stream_resolve_include_path('functions/register-posts-type.php') ):
   include('functions/register-posts-type.php');
+endif;
+
+
+/*---------------------------------------------
+/* Registrar nuevas Taxonomias
+*--------------------------------------------*/
+if( stream_resolve_include_path('functions/register-taxonomies.php') ):
+  include('functions/register-taxonomies.php');
+endif;
+
+/*--------------------------------------------
+/* Customizar Campos Taxonomias
+*--------------------------------------------*/
+if( stream_resolve_include_path('functions/taxonomy/custom-fields-taxonomies.php') ):
+	include('functions/taxonomy/custom-fields-taxonomies.php');
 endif;
 
 /*---------------------------------------------
