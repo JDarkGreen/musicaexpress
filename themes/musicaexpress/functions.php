@@ -97,8 +97,23 @@ endif;
 /* Registrar Metabox
 *---------------------------------------------*/
 
-if( file_exists('functions/register-metabox.php') ):
+if( stream_resolve_include_path('functions/register-metabox.php') ):
   include('functions/register-metabox.php');
+endif;
+
+/*-----------------------------------------------
+/* Soporte de tema
+*-----------------------------------------------*/
+if( stream_resolve_include_path('functions/support-formats.php') ):
+	include('functions/support-formats.php');
+endif;
+
+
+/*------------------------------------------------
+/* Cargar archivos JS 
+*------------------------------------------------*/
+if( stream_resolve_include_path('functions/scripts-js.php') ):
+	include('functions/scripts-js.php');
 endif;
 
 

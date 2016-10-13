@@ -1,0 +1,44 @@
+/* 
+ * ARCHIVO SASS POSEE
+ * CLASES DE LA PÁGINA HOME CSS PARA LA WEB
+ */
+
+/*
+ * SLIDER CAROUSEL HOME
+ */
+#carousel-home
+
+	/* Flechas */
+	.tparrows
+		+border-radius( 50% )
+		height : 63px 
+		width  : 63px
+		//before
+		&:before 
+			font-size  : 35px 
+			line-height: 1em 
+			+translateY(40%)
+
+	/* Contenido Texto Slider */
+	.contentTextSlider 
+		color : white 
+		h2 
+			font-size  : 90px
+			font-weight: 700
+			font-family: 'Hel87CondensedHeavy'
+
+/* boton ver más slider */
+#btn-slider-home
+	+border-radius( 10px )
+	+scale(1)
+	+transition( all 900ms ease-in-out !important )
+	background                 : #EDEEF0
+	color                      : black 
+	display                    : inline-block
+	font-weight                : 600 !important
+	margin                     : 48px 0 0 0
+	padding                    : 12px 58px
+	text-decoration            : none !important
+	//hover 
+	&:hover 
+		+scale( 1.2 )
