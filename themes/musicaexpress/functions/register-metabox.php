@@ -20,3 +20,17 @@ endif;
 if( stream_resolve_include_path('metabox/slider-home/mb_revolution_slider.php') ):
 	include("metabox/slider-home/mb_revolution_slider.php");
 endif;
+
+/******************************************************************/
+/**- PRODUCTOS  **/
+/******************************************************************/
+
+/**[ INCLUIR METABOX DE DESTACADO Y OFERTA ]**/
+if( stream_resolve_include_path('metabox/product/mb_featured_fields.php') ):
+	include("metabox/product/mb_featured_fields.php");
+endif;
+
+/**[ INCLUIR METABOX DE PRECIO ]**/
+if( stream_resolve_include_path('metabox/product/mb_price_product.php') ):
+	include("metabox/product/mb_price_product.php");
+endif;

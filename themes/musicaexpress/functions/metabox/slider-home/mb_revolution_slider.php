@@ -32,9 +32,9 @@ function cd_mb_slider_revolution_cb( $post )
     wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
 
     ?>
-        <label for="mb_rev_slider_select"> Efectos: </label> <br/>
+        <label for="revsliderselect"> Efectos: </label> <br/>
 
-        <select name="mb_rev_slider_select">
+        <select name="revsliderselect" id="revsliderselect">
 
             <!-- Efecto basico -->
             <option value="notransition"> BÁSICOS  </option> 
@@ -53,7 +53,7 @@ function cd_mb_slider_revolution_cb( $post )
             <option value="fadethroughtransparent" <?php selected( $current_effect , 'fadethroughtransparent' ); ?> > Fade through predefined BG </option> 
 
             <!-- Efecto parallax -->
-            <option value="notransition"> PARALLAX  </option>             
+            <option value="parallaxtoright"> PARALLAX  </option>             
             <!-- Efecto  -->
             <option value="parallaxtoright" <?php selected( $current_effect , 'parallaxtoright' ); ?> > Parallax to Right </option>
             <!-- Efecto  -->
@@ -68,7 +68,7 @@ function cd_mb_slider_revolution_cb( $post )
             <option value="parallaxvertical" <?php selected( $current_effect , 'parallaxvertical' ); ?> > Parallax Vertical </option>
 
             <!-- Efecto ramdom -->
-            <option value="notransition"> RAMDOM  </option>
+            <option value="random-selected"> RAMDOM  </option>
             <!-- Efecto  -->
             <option value="random-selected" <?php selected( $current_effect , 'random-selected' ); ?> > Random of Selected </option>    
             <!-- Efecto  -->
@@ -97,12 +97,9 @@ function cd_mb_slider_select_save( $post_id )
     if ( !current_user_can( 'edit_post', $post_id ) ) return;
      
     // Make sure your data is set before trying to save it
-    if( isset( $_POST['mb_rev_slider_select'] ) ):
+    if( isset( $_POST['revsliderselect'] ) ):
 
-        if( !add_post_meta( $post_id, 'mb_rev_slider_select' , $_POST['mb_rev_slider_select'] ) ) :
-            
-            update_post_meta( $post_id, 'mb_rev_slider_select', $_POST['mb_rev_slider_select'] );
-            
-        endif;
+        update_post_meta( $post_id, 'mb_rev_slider_select' , $_POST['revsliderselect']  );
+
     endif;
 }

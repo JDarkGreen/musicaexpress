@@ -37,3 +37,18 @@
 	font-style : normal;
 }
 
+/*
+ * Swis721 BT Bold
+ */
+@font-face 
+{
+  font-family: 'Swis721BTBold';
+  src: url('../../fonts/swiss/swiss721bold/swis721btbold.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/swiss/swiss721bold/swis721btbold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/swiss/swiss721bold/swis721btbold.woff2') format('woff2'), /* Modern Browsers */
+    url('../../fonts/swiss/swiss721bold/swis721btbold.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/swiss/swiss721bold/swis721btbold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/swiss/swiss721bold/swis721btbold.svg') format('svg'); /* Legacy iOS */  
+  font-weight: normal;
+  font-style : normal;
+}

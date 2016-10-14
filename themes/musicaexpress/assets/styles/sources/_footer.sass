@@ -1,0 +1,104 @@
+
+/* 
+ * ARCHIVO SASS POSEE
+ * CLASES O ID RELACIONADOS de: FOOTER CSS PARA LA WEB
+ */
+
+#main-footer
+	background: #EDDD12
+	color     : black 
+	padding   : 17px 0 
+
+// Item de Footer contiene informaciones
+.mainFooter__item
+	border-right: 1px solid rgba(0,0,0,.4)
+	min-height  : 163px
+
+	//último Elemento
+	&:last-child , &:nth-child(3)
+		border-right: none !important
+
+	//Titulos
+	h3.title-footer
+		font-family: "Hel87CondensedHeavy"
+		font-size  : 18px
+		line-height: 1em  
+		margin     : 0 auto 20px
+
+	//Contenedor 
+	.content-item 
+		padding: 17px 15% 0
+
+// Lista de Datos
+ul#mainFooter__list-data
+	list-style-type: none 
+	margin         : 0 
+	padding        : 0 0 0 40px
+	li 
+		font-size  : 15px
+		font-weight: 600
+		margin     : 0 auto 8px
+		//Div inline 
+		.container-inline 
+			display: inline-block
+		i	
+			display       : inline-block
+			font-size     : 20px
+			height        : 20px
+			margin        : 0 15px 0 -39px
+			text-align    : center 
+			vertical-align: top
+			width         : 20px 
+			//Mobile
+			&.icon-mobile 
+				font-size : 24px
+
+		//Texto destacado
+		span.text-featured
+			color : #B5182B
+
+// Redes Sociales
+ul#mainFooter__social-data
+	list-style-type: none
+	margin         : 24px 0 0
+	padding        : 0 
+	li 
+		display    : inline-block
+		font-weight: 600
+		padding    : 0 7px 
+		a 
+			color          : black 
+			display        : block
+			font-size      : 22px  
+			text-decoration: none
+			//Hover
+			&:hover 
+				+animation( expand 1.2s ease-in-out infinite )
+
+	/** [ VARIACION PÁGINA DE CONTACTO ] **/
+	&.page-contact-social-links
+		display: inline-block
+		margin : 0
+		li 
+			a 
+				color : #808080
+
+// Texto Web 
+#text-web 
+	box-sizing : border-box
+	color      : #000
+	font-family: "Helvetica-Condensed-Light-Light"
+	font-size  : 15px
+	font-weight: 700
+	word-break : break-word
+	+text-shadow( 1px 0px 0px black )
+
+// Seccion de Desarrollo
+.mainFooter__develop
+	background: #1a1a1a
+	color     : white
+	font-size : 12px 
+	padding   : 5px 0
+	/* Link */
+	a 
+		color: white

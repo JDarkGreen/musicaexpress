@@ -38,15 +38,15 @@ function create_post_type()
 	/*|----- INSTRUMENTOS ----------------------|*/
 	
 	$labels_instruments = array(
-		'name'               => __('Instrumentos'),
-		'singular_name'      => __('Instrumento'),
-		'add_new'            => __('Nuevo Instrumento'),
-		'add_new_item'       => __('Agregar nuevo Instrumento Principal'),
-		'edit_item'          => __('Editar Instrumento'),
-		'view_item'          => __('Ver Instrumento'),
-		'search_items'       => __('Buscar Instrumento'),
-		'not_found'          => __('Instrumento no encontrado'),
-		'not_found_in_trash' => __('Instrumento no encontrado en la papelera'),
+		'name'               => __('Productos - Instrumentos'),
+		'singular_name'      => __('Producto - Instrumento'),
+		'add_new'            => __('Nuevo Producto - Instrumento'),
+		'add_new_item'       => __('Agregar nuevo Producto - Instrumento Principal'),
+		'edit_item'          => __('Editar Producto - Instrumento'),
+		'view_item'          => __('Ver Producto - Instrumento'),
+		'search_items'       => __('Buscar Producto - Instrumento'),
+		'not_found'          => __('Producto - Instrumento no encontrado'),
+		'not_found_in_trash' => __('Producto - Instrumento no encontrado en la papelera'),
 	);
 
 	$args_instruments = array(
@@ -62,6 +62,63 @@ function create_post_type()
 	
 	#INSTRUMENTOS
 	register_post_type( 'type_instruments' , $args_instruments );
+
+
+	/*|----- VIDEOS ----------------------|*/
+	
+	$labels_videos = array(
+		'name'               => __('Galería Videos'),
+		'singular_name'      => __('Video'),
+		'add_new'            => __('Nuevo Video'),
+		'add_new_item'       => __('Agregar nuevo Video Principal'),
+		'edit_item'          => __('Editar Video'),
+		'view_item'          => __('Ver Video'),
+		'search_items'       => __('Buscar Video'),
+		'not_found'          => __('Video no encontrado'),
+		'not_found_in_trash' => __('Video no encontrado en la papelera'),
+	);
+
+	$args_videos = array(
+		'labels'      => $labels_videos,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => true,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
+		'show_ui' => true,
+		'taxonomies'  => array('post-tag'),
+		'menu_icon'   => 'dashicons-video-alt',
+	);
+	
+	#VIDEOS
+	register_post_type( 'type-videos' , $args_videos );
+
+	/*|----- MARCAS ----------------------|*/
+	
+	$labels_marcas = array(
+		'name'               => __('Marcas'),
+		'singular_name'      => __('Marca'),
+		'add_new'            => __('Nuevo Marca'),
+		'add_new_item'       => __('Agregar nueva Marca Principal'),
+		'edit_item'          => __('Editar Marca'),
+		'view_item'          => __('Ver Marca'),
+		'search_items'       => __('Buscar Marca'),
+		'not_found'          => __('Marca no encontrada'),
+		'not_found_in_trash' => __('Marca no encontrada en la papelera'),
+	);
+
+	$args_marcas = array(
+		'labels'      => $labels_marcas,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => true,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
+		'show_ui' => true,
+		'taxonomies'  => array('post-tag'),
+		'menu_icon'   => 'dashicons-groups',
+	);
+	
+	#MARCAS
+	register_post_type( 'type-marcas' , $args_marcas );
 
 
 

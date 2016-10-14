@@ -70,6 +70,12 @@ if( stream_resolve_include_path('functions/register-menu.php') ):
   include('functions/register-menu.php');
 endif;
 
+/*--------------------------------------------
+ *Agregando nuevos SIDEBARS y secciones para widgets
+*--------------------------------------------*/
+if( stream_resolve_include_path('functions/add-sidebars.php') ):
+  include('functions/add-sidebars.php');
+endif;
 
 /*---------------------------------------------
 /* Agregando nuevos tipos de post
@@ -113,7 +119,26 @@ endif;
 /* Cargar archivos JS 
 *------------------------------------------------*/
 if( stream_resolve_include_path('functions/scripts-js.php') ):
-	include('functions/scripts-js.php');
+  include('functions/scripts-js.php');
+endif;
+
+
+/*------------------------------------------------
+/* Cargar WIDGETS DEL TEMA
+*------------------------------------------------*/
+
+/*| WIDGET INSERTAR IMÁGENES |*/
+if( stream_resolve_include_path('functions/widgets/widget-image-and-link.php') ):
+	include('functions/widgets/widget-image-and-link.php');
+endif;
+
+
+/*-----------------------------------------------
+/* FUNCIONES PERSONALIZADAS
+*------------------------------------------------*/
+
+if( stream_resolve_include_path('functions/custom-functions.php') ):
+  include('functions/custom-functions.php');
 endif;
 
 

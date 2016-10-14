@@ -22,9 +22,20 @@ body
 	display  : flex 
 	flex-wrap: wrap 
 
+/* relative */
+.posrelative 
+	position: relative
+
 /* justificado centrado */
 .justify-center 
 	justify-content : center
+
+/* alineacion items */
+.align-items-center 
+	align-items : center 
+
+.align-flex-end
+	align-items : flex-end
 
 /* alineacion baseline */
 .align-baseline 
@@ -37,12 +48,98 @@ body
 /* Contenedor Limitador layout */
 .wrapperContainer
 	margin   : 0 auto 
-	max-width: 1000px 
+	max-width: 1126px 
 	width    : 100%
+
+/* Contenedor de Paginas Layour */
+.wrapperPageLayout
+	padding  : 60px 0
 
 
 /*
- * Botones 
+ * BANNER COMUN DE PÁGINA
  */
-/* Ver más */
+#commonBannerPages
+	background : #EDDD12
+	color      : black 
+	padding    : 14px 0 
+	h2.title 
+		font-size  : 25px
+		line-height: 1em
+		margin     : 0
+		span 
+			font-weight : 700
+			font-family : "Hel87CondensedHeavy"
+
+
+/* 
+ * BOTONES COMUNES 
+ */
+
+//Botón a Sección
+.btnShowMoreCommon
+	background     : black 
+	color          : #EDDD12
+	display        : inline-block 
+	font-size      : 12px 
+	font-weight    : 700
+	line-height    : 1em 
+	padding        : 9px 28px 
+	text-decoration: none !important
+	+transition( all 500ms ease )
+	+border-radius( 5px )
+	//hover and focus 
+	&:hover , &:focus 
+		color : #EDDD12 
+	&:hover 
+		+scale(1.12)
+
+/*
+ * TITULOS COMUNES 
+ */
+
+//Titulo de seccion
+.sectionTitle
+	color      : black 
+	font-family: "Hel87CondensedHeavy"
+	margin     : 0 0 20px 
+
+
+/*
+ * MARCAS DE EMPRESA
+ */
+#sectionMarcas
+	padding : 42px 0
+	
+	.item-marcas
+		margin   : 0 48px 30px 0 
+		max-width: calc( (100%/7) - ( (6*48px) / 7) )
+		width    : 100%
+		//Septimos y ultimos elementos
+		&:nth-child(7n) , &:last-child 
+			margin-right : 0
+
+
+/*
+ * PAGINADOR 
+ */
+.sectionPagination
+	margin : 20px auto 0
+	a 
+		color          : black 
+		margin         : 0 2px 0 0
+		padding        : 4px 
+		text-decoration: none !important 
+		+transition( all 500ms ease )
+
+		//hover  and active 
+		&:hover , &.active
+			background : #EDDD12
+
+		//disabled 
+		&.disabled
+			+opacity(.9)
+			cursor  : none 
+			position: relative 
+			z-index : -9
 

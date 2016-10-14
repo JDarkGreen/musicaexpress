@@ -1,0 +1,54 @@
+/* 
+ * ARCHIVO SASS POSEE
+ * CLASES DE LA PÁGINA O RELACIONADA A PRODUCTOS CSS PARA LA WEB
+ */
+
+/*
+ * PRODUCTOS PREVIEW
+ */
+.itemProductPreview
+	border    : 1px solid #C5C5C7
+	height    : 385px
+	margin    : 0 18px 55px 0 
+	max-width : calc( (100%/4) - ( (3*18px) / 4) )
+	width     : 100%
+	word-break: break-word 
+	//cuarto y ultimo elemento
+	&:nth-child(4n) , &:last-child 
+		margin-right : 0
+
+	//Imágen 
+	.featured-image
+		height  : 245px 
+		margin  : 0 0 10px
+		overflow: hidden 
+		//before
+		&:before 
+			background: rgba(237,221,18,.4)
+			bottom    : 0
+			content   : ""
+			left      : 0
+			position  : absolute
+			right     : 0 
+			top       : 100%
+			+transition( all 600ms ease-in ) 
+		//hover 
+		&:hover 
+			&:before 
+				top : 0
+
+	//Contenedor de texto
+	.contentText
+		padding : 0 15px 13px
+
+	h2 
+		font-family: "Swis721BTBold"
+		font-size  : 14px
+		height     : 48px 
+		margin     : 0
+
+	span
+		display  : inline-block 
+		font-size: 15px
+		height   : 17px
+		margin   : 0 0 10px
