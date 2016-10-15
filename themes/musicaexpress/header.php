@@ -147,4 +147,3 @@ $logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.
 
 	</header><!-- .site-header -->
 
-	<div id="content" class="site-content">

@@ -12,6 +12,24 @@ if( stream_resolve_include_path('metabox/mb_order_tposts.php') ):
 	include('metabox/mb_order_tposts.php');
 endif;
 
+
+/*****************************************************************/
+/**- COMUNES **/
+
+/******************************************************************/
+
+/**[ INCLUIR METABOX DE BANNER DE PÁGINA ]**/
+if( stream_resolve_include_path('metabox/common/mb_custom_banner.php') ):
+	include("metabox/common/mb_custom_banner.php");
+endif;
+
+/**[ INCLUIR METABOX DE GALERÍA ]**/
+if( stream_resolve_include_path('metabox/common/mb_custom_gallery.php') ):
+	include("metabox/common/mb_custom_gallery.php");
+endif;
+
+
+
 /******************************************************************/
 /**- SLIDER HOME **/
 /******************************************************************/

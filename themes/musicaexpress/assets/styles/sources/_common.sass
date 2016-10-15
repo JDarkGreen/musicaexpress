@@ -8,7 +8,9 @@
  * RESET
  */
 body , html 
-	font-family : "Arial" , sans-serif
+	font-family: "Arial" , sans-serif
+	height     : 100%
+	width      : 100%
 
 body 
 	-webkit-transform : translate3d(0,0,0)
@@ -71,6 +73,28 @@ body
 			font-weight : 700
 			font-family : "Hel87CondensedHeavy"
 
+//Top Banner 
+.pageCommon__topbanner
+	height  : 130px
+	overflow: hidden 
+
+	figure 
+		background-repeat: no-repeat 
+		background-size  : cover 
+
+	h2.title-page 
+		+text-shadow( 1px 1px 4px black )
+		align-items: center
+		bottom     : 0
+		color      : white
+		display    : flex
+		font-family: "Hel87CondensedHeavy"
+		font-size  : 35px
+		left       : 10%
+		margin     : 0
+		position   : absolute
+		right      : 0
+		top        : 0
 
 /* 
  * BOTONES COMUNES 
@@ -142,4 +166,22 @@ body
 			cursor  : none 
 			position: relative 
 			z-index : -9
+
+/*
+ * PAGINAS CON GALERÍA
+ */
+.pageWithGallery	
+	.owl-controls	
+		.owl-dots
+			.owl-dot
+				+border-radius( 50% )
+				+transition( all 500ms ease )
+				border : 2px solid #B0B0B0
+				display: inline-block
+				height : 12px 
+				margin : 0 6px 0 0
+				width  : 12px
+				//active and hover
+				&.active , &:hover 
+					border: 2px solid black	
 

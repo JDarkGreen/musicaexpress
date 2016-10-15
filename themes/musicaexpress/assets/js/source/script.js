@@ -102,20 +102,6 @@ function customOwlCarousels()
 
 }
 
-/*|----------------------------------------------------------------------|*/
-/*|----- FANCYBOX IMAGES - LIBRERIA FANCYBOX -----|*/
-/*|----------------------------------------------------------------------|*/
-
-function itemsFancybox()
-{
-	j("a.gallery-fancybox").fancybox({
-		'overlayShow': false,
-		'openEffect' : 'elastic',
-		'closeEffect': 'elastic',
-		'openSpeed'  : 300,
-		'closeSpeed' : 300,
-	});	
-}
 
 
 /*|----------------------------------------------------------------------|*/
@@ -136,7 +122,18 @@ function scrollRevealElements()
 		scale   : 0.9,
 		reset   : false,
 		duration: 1500,
-	} , 50 );	
+	} , 50 );
+
+	//RollIn
+	sr.reveal('.sr-rollIn', { 
+		rotate   : { x:0 , y:1 , z:-120 },
+		translate: { x:-100 , y:0 , z:0 },
+		delay    : 200,
+		reset    : true,
+		duration : 600,
+	} , 50 );
+
+
 }
 		
 
@@ -161,7 +158,13 @@ function scrollRevealElements()
 		/*
 		 * Llamar funcion customiza para galeria fancybox
 		 */
-		 itemsFancybox();
+		j("a.gallery-fancybox").fancybox({
+			'overlayShow': false,
+			'openEffect' : 'elastic',
+			'closeEffect': 'elastic',
+			'openSpeed'  : 300,
+			'closeSpeed' : 300,
+		});	
 		/*
 		 * Llamar funcion customiza para animacion cuando se hace
 		 * scroll

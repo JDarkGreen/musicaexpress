@@ -17,9 +17,7 @@ $options = get_option( 'theme_settings' );
 
 ?>
 
-	</div><!-- .site-content -->
-
-	<footer id="main-footer" class="site-footer" role="contentinfo">
+	<footer id="main-footer" class="site-footer scroll-animate" role="contentinfo">
 
 		<!-- Wrapper Container  -->
 		<div class="wrapperContainer">
