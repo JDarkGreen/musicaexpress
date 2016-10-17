@@ -46,7 +46,10 @@ endif;
 				</h2> <!-- /.sectionTitle -->
 
 				<!-- Texto -->
-				<?= apply_filters( 'the_content' , $post->post_content ); ?>
+				<div class="contentTextPage">
+					<?= apply_filters( 'classtoparagraphs' , $post->post_content , 
+					    array('sr-lightSpeedIn') ); ?>
+				</div> <!-- /.contentTextPage -->
 				
 			</div> <!-- /.col-xs-12 col-sm-8 -->
 

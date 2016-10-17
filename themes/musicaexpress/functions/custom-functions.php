@@ -50,5 +50,15 @@ include( 'custom-functions/functions-banner-page.php' );
 
 include( 'custom-functions/functions-gallery-post.php' );
 
+/**
+* ---------------------------------------------------------------
+* -- NUEVOS FILTROS CUSTOMIZADOS - PERSONALIZADOS
+* ---------------------------------------------------------------
+**/
+
+if( stream_resolve_include_path('custom-functions/custom-filters.php') ):
+	include('custom-functions/custom-filters.php');
+endif;
+
 
 ?>

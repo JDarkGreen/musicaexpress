@@ -1,6 +1,6 @@
 # WordPress MySQL database migration
 #
-# Generated: Saturday 15. October 2016 00:08 UTC
+# Generated: Monday 17. October 2016 02:08 UTC
 # Hostname: localhost
 # Database: `musicaexpress`
 # --------------------------------------------------------
@@ -149,7 +149,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=299 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=363 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -260,11 +260,11 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:5:{i:1476527811;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476527947;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476545076;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1476571110;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:5:{i:1476700611;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476700747;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476717876;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1476743910;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (117, 'can_compress_scripts', '1', 'no'),
 (137, 'recently_activated', 'a:0:{}', 'yes'),
 (138, 'wpmf_use_taxonomy', '1', 'yes'),
-(139, 'rrrlgvwr_options', 'a:15:{s:21:"plugin_option_version";s:5:"1.0.4";s:21:"php_error_log_visible";i:0;s:11:"lines_count";s:2:"10";s:16:"confirm_filesize";i:0;s:14:"error_log_path";s:84:"C:/xampp/htdocs/musicaexpress/wp-content/plugins/error-log-viewer/log/php-errors.log";s:17:"count_visible_log";i:1;s:14:"frequency_send";i:1;s:8:"hour_day";i:3600;s:23:"display_settings_notice";i:1;s:22:"suggest_feature_banner";i:1;s:13:"first_install";i:1476284908;s:19:"go_settings_counter";i:1;s:9:"file_path";a:1:{i:1;s:84:"C:/xampp/htdocs/musicaexpress/wp-content/plugins/error-log-viewer/log/php-errors.log";}s:10:"send_email";i:0;s:20:"0_php-errors_visible";i:1;}', 'yes'),
+(139, 'rrrlgvwr_options', 'a:15:{s:21:"plugin_option_version";N;s:21:"php_error_log_visible";i:0;s:11:"lines_count";s:2:"10";s:16:"confirm_filesize";i:0;s:14:"error_log_path";s:84:"C:/xampp/htdocs/musicaexpress/wp-content/plugins/error-log-viewer/log/php-errors.log";s:17:"count_visible_log";i:1;s:14:"frequency_send";i:1;s:8:"hour_day";i:3600;s:23:"display_settings_notice";i:1;s:22:"suggest_feature_banner";i:1;s:13:"first_install";i:1476284908;s:19:"go_settings_counter";i:1;s:9:"file_path";a:1:{i:1;s:84:"C:/xampp/htdocs/musicaexpress/wp-content/plugins/error-log-viewer/log/php-errors.log";}s:10:"send_email";i:0;s:20:"0_php-errors_visible";i:1;}', 'yes'),
 (143, 'bstwbsftwppdtplgns_options', 'a:1:{s:8:"bws_menu";a:1:{s:7:"version";a:1:{s:37:"error-log-viewer/error-log-viewer.php";s:5:"1.9.0";}}}', 'yes'),
 (144, 'duplicate_post_copyexcerpt', '1', 'yes'),
 (145, 'duplicate_post_copyattachments', '0', 'yes'),
@@ -296,7 +296,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (171, 'wpmf_weight_selected', '[["0-61440","kB"],["61440-122880","kB"],["122880-184320","kB"],["184320-245760","kB"],["245760-307200","kB"]]', 'yes'),
 (172, 'wpmf_color_singlefile', '{"bgdownloadlink":"#444444","hvdownloadlink":"#888888","fontdownloadlink":"#ffffff","hoverfontcolor":"#ffffff"}', 'yes'),
 (173, 'wpmf_option_singlefile', '0', 'yes'),
-(174, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1476457383;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.2";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.2";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
+(174, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1476662270;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.2";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.2";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
 (175, '_wpmf_import_notice_flag', 'no', 'yes'),
 (176, 'theme_mods_twentysixteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1476226155;s:4:"data";a:2:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}}}}', 'yes'),
 (177, 'current_theme', 'MusicaExpress Theme', 'yes'),
@@ -306,7 +306,8 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (205, 'theme_settings', 'a:14:{s:18:"theme_phone_text_1";s:12:"(01) 3306654";s:18:"theme_phone_text_2";s:0:"";s:16:"theme_cel_text_1";s:9:"963632635";s:16:"theme_cel_text_2";s:0:"";s:16:"theme_email_text";s:30:"ventasmusicalexpress@gmail.com";s:18:"theme_address_text";s:12:"Lima - Perú";s:19:"theme_atention_text";s:0:"";s:20:"theme_social_fb_text";s:33:"https://www.facebook.com/facebook";s:25:"theme_social_twitter_text";s:33:"https://www.facebook.com/facebook";s:25:"theme_social_youtube_text";s:33:"https://www.facebook.com/facebook";s:27:"theme_social_instagram_text";s:0:"";s:26:"theme_social_linkedin_text";s:0:"";s:23:"theme_social_gplus_text";s:0:"";s:27:"theme_social_pinterest_text";s:0:"";}', 'yes'),
 (217, 'category_instruments_children', 'a:0:{}', 'yes'),
 (281, 'widget_image_and_link_w', 'a:5:{i:2;a:11:{s:5:"title";s:22:"Instrumentos y ofertas";s:8:"ad_img_1";N;s:8:"ad_img_2";N;s:8:"ad_img_3";N;s:8:"ad_img_4";N;s:9:"ad_link_1";N;s:9:"ad_link_2";N;s:9:"ad_link_3";N;s:9:"ad_link_4";N;s:5:"w_img";s:75:"http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-widget.jpg";s:6:"w_link";s:40:"http://localhost/musicaexpress/nosotros/";}i:3;a:3:{s:5:"title";s:21:"Ofertas y promociones";s:5:"w_img";s:75:"http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-widget.jpg";s:6:"w_link";s:40:"http://localhost/musicaexpress/nosotros/";}i:4;a:3:{s:5:"title";s:23:"Ofertas y promociones 2";s:5:"w_img";s:75:"http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-widget.jpg";s:6:"w_link";s:1:"#";}i:5;a:3:{s:5:"title";s:9:"Ofertas 3";s:5:"w_img";s:75:"http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-widget.jpg";s:6:"w_link";s:1:"#";}s:12:"_multiwidget";i:1;}', 'yes'),
-(296, 'wpmf-category_children', 'a:0:{}', 'yes') ;
+(327, 'wpmf-category_children', 'a:0:{}', 'yes'),
+(358, 'category_children', 'a:0:{}', 'yes') ;
 
 #
 # End of data contents of table `wp_options`
@@ -333,7 +334,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=450 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=460 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -350,11 +351,11 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (8, 7, '_edit_last', '1'),
 (9, 7, '_edit_lock', '1476489746:1'),
 (10, 9, '_edit_last', '1'),
-(11, 9, '_edit_lock', '1476285781:1'),
+(11, 9, '_edit_lock', '1476572662:1'),
 (12, 12, '_edit_last', '1'),
 (13, 12, '_edit_lock', '1476285807:1'),
 (14, 14, '_edit_last', '1'),
-(15, 14, '_edit_lock', '1476285817:1'),
+(15, 14, '_edit_lock', '1476573730:1'),
 (16, 16, '_edit_last', '1'),
 (17, 16, '_edit_lock', '1476285839:1'),
 (18, 18, '_menu_item_type', 'post_type'),
@@ -644,16 +645,16 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (375, 1, '_wp_trash_meta_comments_status', 'a:1:{i:1;s:1:"1";}') ;
 INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (376, 86, '_edit_last', '1'),
-(377, 86, '_edit_lock', '1476484867:1'),
+(377, 86, '_edit_lock', '1476574083:1'),
 (379, 86, 'mbox_order_tpost', '1'),
 (380, 86, 'mbox_order_tpost', '1'),
 (381, 88, '_edit_last', '1'),
-(382, 88, '_edit_lock', '1476477525:1'),
+(382, 88, '_edit_lock', '1476574075:1'),
 (383, 88, 'mbox_order_tpost', '2'),
 (384, 88, 'mbox_order_tpost', '2'),
 (385, 88, '_dp_original', '86'),
 (386, 89, '_edit_last', '1'),
-(387, 89, '_edit_lock', '1476477519:1'),
+(387, 89, '_edit_lock', '1476574070:1'),
 (388, 89, 'mbox_order_tpost', '3'),
 (389, 89, 'mbox_order_tpost', '3'),
 (391, 89, '_dp_original', '88'),
@@ -707,7 +708,17 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (446, 103, 'wpmf_filetype', 'jpg'),
 (447, 103, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:480;s:6:"height";i:477;s:4:"file";s:25:"2016/10/sample-images.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:25:"sample-images-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:25:"sample-images-300x298.jpg";s:5:"width";i:300;s:6:"height";i:298;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:25:"sample-images-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:25:"sample-images-352x350.jpg";s:5:"width";i:352;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (448, 7, 'mb_featured_banner', ''),
-(449, 7, 'mb_image_gallery', ',103,103,103') ;
+(449, 7, 'mb_image_gallery', ',103,103,103'),
+(450, 105, '_wp_attached_file', '2016/10/sample-images-1.jpg'),
+(451, 105, 'wpmf_size', '44657'),
+(452, 105, 'wpmf_filetype', 'jpg'),
+(453, 105, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:480;s:6:"height";i:477;s:4:"file";s:27:"2016/10/sample-images-1.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"sample-images-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:27:"sample-images-1-300x298.jpg";s:5:"width";i:300;s:6:"height";i:298;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:27:"sample-images-1-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:27:"sample-images-1-352x350.jpg";s:5:"width";i:352;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(454, 9, '_wp_page_template', 'default'),
+(455, 9, 'mb_featured_banner', ''),
+(456, 9, 'mb_image_gallery', ',105,105,105'),
+(457, 14, '_wp_page_template', 'page-blog.php'),
+(458, 14, 'mb_featured_banner', ''),
+(459, 14, 'mb_image_gallery', '') ;
 
 #
 # End of data contents of table `wp_postmeta`
@@ -755,7 +766,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -770,12 +781,12 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (6, 1, '2016-10-12 15:24:45', '2016-10-12 15:24:45', '', 'Inicio', '', 'inherit', 'closed', 'closed', '', '5-revision-v1', '', '', '2016-10-12 15:24:45', '2016-10-12 15:24:45', '', 5, 'http://localhost/musicaexpress/2016/10/12/5-revision-v1/', 0, 'revision', '', 0),
 (7, 1, '2016-10-12 15:24:58', '2016-10-12 15:24:58', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Nosotros', '', 'publish', 'closed', 'closed', '', 'nosotros', '', '', '2016-10-14 23:27:02', '2016-10-14 23:27:02', '', 0, 'http://localhost/musicaexpress/?page_id=7', 0, 'page', '', 0),
 (8, 1, '2016-10-12 15:24:58', '2016-10-12 15:24:58', '', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2016-10-12 15:24:58', '2016-10-12 15:24:58', '', 7, 'http://localhost/musicaexpress/2016/10/12/7-revision-v1/', 0, 'revision', '', 0),
-(9, 1, '2016-10-12 15:25:21', '2016-10-12 15:25:21', '', 'Alquiler de Instrumentos', '', 'publish', 'closed', 'closed', '', 'alquiler-de-instrumentos', '', '', '2016-10-12 15:25:21', '2016-10-12 15:25:21', '', 0, 'http://localhost/musicaexpress/?page_id=9', 0, 'page', '', 0),
+(9, 1, '2016-10-12 15:25:21', '2016-10-12 15:25:21', '<h2>EQUIPOS DE SONIDO</h2>\r\n\r\n<p class="hola">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>\r\n\r\n&nbsp;\r\n<h2>BACKLINE</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Alquiler de Instrumentos', '', 'publish', 'closed', 'closed', '', 'alquiler-de-instrumentos', '', '', '2016-10-15 19:14:36', '2016-10-15 19:14:36', '', 0, 'http://localhost/musicaexpress/?page_id=9', 0, 'page', '', 0),
 (10, 1, '2016-10-12 15:25:21', '2016-10-12 15:25:21', '', 'Alquiler de Instrumentos', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-12 15:25:21', '2016-10-12 15:25:21', '', 9, 'http://localhost/musicaexpress/2016/10/12/9-revision-v1/', 0, 'revision', '', 0),
 (11, 1, '2016-10-12 15:25:25', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2016-10-12 15:25:25', '0000-00-00 00:00:00', '', 0, 'http://localhost/musicaexpress/?page_id=11', 0, 'page', '', 0),
 (12, 1, '2016-10-12 15:25:44', '2016-10-12 15:25:44', '', 'Soporte Técnico', '', 'publish', 'closed', 'closed', '', 'soporte-tecnico', '', '', '2016-10-12 15:25:44', '2016-10-12 15:25:44', '', 0, 'http://localhost/musicaexpress/?page_id=12', 0, 'page', '', 0),
 (13, 1, '2016-10-12 15:25:44', '2016-10-12 15:25:44', '', 'Soporte Técnico', '', 'inherit', 'closed', 'closed', '', '12-revision-v1', '', '', '2016-10-12 15:25:44', '2016-10-12 15:25:44', '', 12, 'http://localhost/musicaexpress/2016/10/12/12-revision-v1/', 0, 'revision', '', 0),
-(14, 1, '2016-10-12 15:25:57', '2016-10-12 15:25:57', '', 'Blog', '', 'publish', 'closed', 'closed', '', 'blog', '', '', '2016-10-12 15:25:57', '2016-10-12 15:25:57', '', 0, 'http://localhost/musicaexpress/?page_id=14', 0, 'page', '', 0),
+(14, 1, '2016-10-12 15:25:57', '2016-10-12 15:25:57', '', 'Blog', '', 'publish', 'closed', 'closed', '', 'blog', '', '', '2016-10-15 23:08:34', '2016-10-15 23:08:34', '', 0, 'http://localhost/musicaexpress/?page_id=14', 0, 'page', '', 0),
 (15, 1, '2016-10-12 15:25:57', '2016-10-12 15:25:57', '', 'Blog', '', 'inherit', 'closed', 'closed', '', '14-revision-v1', '', '', '2016-10-12 15:25:57', '2016-10-12 15:25:57', '', 14, 'http://localhost/musicaexpress/2016/10/12/14-revision-v1/', 0, 'revision', '', 0),
 (16, 1, '2016-10-12 15:26:10', '2016-10-12 15:26:10', '', 'Contáctenos', '', 'publish', 'closed', 'closed', '', 'contactenos', '', '', '2016-10-12 15:26:10', '2016-10-12 15:26:10', '', 0, 'http://localhost/musicaexpress/?page_id=16', 0, 'page', '', 0),
 (17, 1, '2016-10-12 15:26:10', '2016-10-12 15:26:10', '', 'Contáctenos', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2016-10-12 15:26:10', '2016-10-12 15:26:10', '', 16, 'http://localhost/musicaexpress/2016/10/12/16-revision-v1/', 0, 'revision', '', 0),
@@ -836,10 +847,10 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (83, 1, '2016-10-14 20:17:02', '2016-10-14 20:17:02', '', 'sample-widget', '', 'inherit', 'open', 'closed', '', 'sample-widget', '', '', '2016-10-14 20:17:02', '2016-10-14 20:17:02', '', 0, 'http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-widget.jpg', 0, 'attachment', 'image/jpeg', 0),
 (84, 1, '2016-10-14 20:20:08', '2016-10-14 20:20:08', '', 'sample-widget', '', 'inherit', 'open', 'closed', '', 'sample-widget-2', '', '', '2016-10-14 20:20:08', '2016-10-14 20:20:08', '', 0, 'http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-widget-1.jpg', 0, 'attachment', 'image/jpeg', 0),
 (85, 1, '2016-10-14 20:37:37', '2016-10-14 20:37:37', 'Bienvenido a WordPress. Esta es su primera entrada. Edítela o bórrela, y ¡empiece a escribir!', '¡Hola mundo!', '', 'inherit', 'closed', 'closed', '', '1-revision-v1', '', '', '2016-10-14 20:37:37', '2016-10-14 20:37:37', '', 1, 'http://localhost/musicaexpress/2016/10/14/1-revision-v1/', 0, 'revision', '', 0),
-(86, 1, '2016-10-14 20:38:08', '2016-10-14 20:38:08', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal', '', 'publish', 'open', 'open', '', 'art-personal', '', '', '2016-10-14 20:38:08', '2016-10-14 20:38:08', '', 0, 'http://localhost/musicaexpress/?p=86', 0, 'post', '', 0),
+(86, 1, '2016-10-14 20:38:08', '2016-10-14 20:38:08', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal', '', 'publish', 'open', 'open', '', 'art-personal', '', '', '2016-10-15 23:29:04', '2016-10-15 23:29:04', '', 0, 'http://localhost/musicaexpress/?p=86', 0, 'post', '', 0),
 (87, 1, '2016-10-14 20:38:08', '2016-10-14 20:38:08', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal', '', 'inherit', 'closed', 'closed', '', '86-revision-v1', '', '', '2016-10-14 20:38:08', '2016-10-14 20:38:08', '', 86, 'http://localhost/musicaexpress/2016/10/14/86-revision-v1/', 0, 'revision', '', 0),
-(88, 1, '2016-10-14 20:38:18', '2016-10-14 20:38:18', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal 2', '', 'publish', 'open', 'open', '', 'art-personal-2', '', '', '2016-10-14 20:38:45', '2016-10-14 20:38:45', '', 0, 'http://localhost/musicaexpress/?p=88', 0, 'post', '', 0),
-(89, 1, '2016-10-14 20:38:24', '2016-10-14 20:38:24', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal 3', '', 'publish', 'open', 'open', '', 'art-personal-3', '', '', '2016-10-14 20:38:39', '2016-10-14 20:38:39', '', 0, 'http://localhost/musicaexpress/?p=89', 0, 'post', '', 0),
+(88, 1, '2016-10-14 20:38:18', '2016-10-14 20:38:18', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal 2', '', 'publish', 'open', 'open', '', 'art-personal-2', '', '', '2016-10-15 23:29:04', '2016-10-15 23:29:04', '', 0, 'http://localhost/musicaexpress/?p=88', 0, 'post', '', 0),
+(89, 1, '2016-10-14 20:38:24', '2016-10-14 20:38:24', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal 3', '', 'publish', 'open', 'open', '', 'art-personal-3', '', '', '2016-10-15 23:29:04', '2016-10-15 23:29:04', '', 0, 'http://localhost/musicaexpress/?p=89', 0, 'post', '', 0),
 (90, 1, '2016-10-14 20:38:35', '2016-10-14 20:38:35', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal 3', '', 'inherit', 'closed', 'closed', '', '89-revision-v1', '', '', '2016-10-14 20:38:35', '2016-10-14 20:38:35', '', 89, 'http://localhost/musicaexpress/2016/10/14/89-revision-v1/', 0, 'revision', '', 0),
 (91, 1, '2016-10-14 20:38:45', '2016-10-14 20:38:45', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Art Personal 2', '', 'inherit', 'closed', 'closed', '', '88-revision-v1', '', '', '2016-10-14 20:38:45', '2016-10-14 20:38:45', '', 88, 'http://localhost/musicaexpress/2016/10/14/88-revision-v1/', 0, 'revision', '', 0),
 (92, 1, '2016-10-14 20:53:06', '2016-10-14 20:53:06', 'https://www.youtube.com/watch?v=OPf0YbXqDm0', 'Nuevo Video', '', 'publish', 'closed', 'closed', '', 'nuevo-video', '', '', '2016-10-14 20:53:06', '2016-10-14 20:53:06', '', 0, 'http://localhost/musicaexpress/?post_type=type-videos&#038;p=92', 0, 'type-videos', '', 0),
@@ -853,7 +864,13 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (100, 1, '2016-10-14 21:24:51', '2016-10-14 21:24:51', '', 'Korg', '', 'publish', 'closed', 'closed', '', 'korg-7', '', '', '2016-10-14 21:25:03', '2016-10-14 21:25:03', '', 0, 'http://localhost/musicaexpress/?post_type=type-marcas&#038;p=100', 0, 'type-marcas', '', 0),
 (101, 1, '2016-10-14 23:21:18', '2016-10-14 23:21:18', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '7-autosave-v1', '', '', '2016-10-14 23:21:18', '2016-10-14 23:21:18', '', 7, 'http://localhost/musicaexpress/2016/10/14/7-autosave-v1/', 0, 'revision', '', 0),
 (102, 1, '2016-10-14 23:21:27', '2016-10-14 23:21:27', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '7-revision-v1', '', '', '2016-10-14 23:21:27', '2016-10-14 23:21:27', '', 7, 'http://localhost/musicaexpress/2016/10/14/7-revision-v1/', 0, 'revision', '', 0),
-(103, 1, '2016-10-14 23:26:47', '2016-10-14 23:26:47', '', 'sample-images', '', 'inherit', 'open', 'closed', '', 'sample-images', '', '', '2016-10-14 23:26:47', '2016-10-14 23:26:47', '', 7, 'http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-images.jpg', 0, 'attachment', 'image/jpeg', 0) ;
+(103, 1, '2016-10-14 23:26:47', '2016-10-14 23:26:47', '', 'sample-images', '', 'inherit', 'open', 'closed', '', 'sample-images', '', '', '2016-10-14 23:26:47', '2016-10-14 23:26:47', '', 7, 'http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-images.jpg', 0, 'attachment', 'image/jpeg', 0),
+(104, 1, '2016-10-15 18:55:49', '2016-10-15 18:55:49', '<h2>EQUIPOS DE SONIDO</h2>\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n<h2>BACKLINE</h2>\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Alquiler de Instrumentos', '', 'inherit', 'closed', 'closed', '', '9-autosave-v1', '', '', '2016-10-15 18:55:49', '2016-10-15 18:55:49', '', 9, 'http://localhost/musicaexpress/2016/10/15/9-autosave-v1/', 0, 'revision', '', 0),
+(105, 1, '2016-10-15 18:56:15', '2016-10-15 18:56:15', '', 'sample-images', '', 'inherit', 'open', 'closed', '', 'sample-images-2', '', '', '2016-10-15 18:56:15', '2016-10-15 18:56:15', '', 9, 'http://localhost/musicaexpress/wp-content/uploads/2016/10/sample-images-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(106, 1, '2016-10-15 18:56:31', '2016-10-15 18:56:31', '<h2>EQUIPOS DE SONIDO</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n<h2></h2>\r\n<h2>BACKLINE</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Alquiler de Instrumentos', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-15 18:56:31', '2016-10-15 18:56:31', '', 9, 'http://localhost/musicaexpress/2016/10/15/9-revision-v1/', 0, 'revision', '', 0),
+(107, 1, '2016-10-15 19:11:26', '2016-10-15 19:11:26', '<h2>EQUIPOS DE SONIDO</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n<h2>BACKLINE</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Alquiler de Instrumentos', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-15 19:11:26', '2016-10-15 19:11:26', '', 9, 'http://localhost/musicaexpress/2016/10/15/9-revision-v1/', 0, 'revision', '', 0),
+(108, 1, '2016-10-15 19:11:32', '2016-10-15 19:11:32', '<h2>EQUIPOS DE SONIDO</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n<h2>BACKLINE</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Alquiler de Instrumentos', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-15 19:11:32', '2016-10-15 19:11:32', '', 9, 'http://localhost/musicaexpress/2016/10/15/9-revision-v1/', 0, 'revision', '', 0),
+(109, 1, '2016-10-15 19:14:36', '2016-10-15 19:14:36', '<h2>EQUIPOS DE SONIDO</h2>\r\n\r\n<p class="hola">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>\r\n\r\n&nbsp;\r\n<h2>BACKLINE</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Alquiler de Instrumentos', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-15 19:14:36', '2016-10-15 19:14:36', '', 9, 'http://localhost/musicaexpress/2016/10/15/9-revision-v1/', 0, 'revision', '', 0) ;
 
 #
 # End of data contents of table `wp_posts`
@@ -917,7 +934,8 @@ INSERT INTO `wp_term_relationships` ( `object_id`, `term_taxonomy_id`, `term_ord
 (88, 1, 0),
 (89, 1, 0),
 (94, 13, 0),
-(103, 14, 0) ;
+(103, 14, 0),
+(105, 15, 0) ;
 
 #
 # End of data contents of table `wp_term_relationships`
@@ -946,7 +964,7 @@ CREATE TABLE `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -963,7 +981,9 @@ INSERT INTO `wp_term_taxonomy` ( `term_taxonomy_id`, `term_id`, `taxonomy`, `des
 (11, 11, 'wpmf-category', '', 0, 0),
 (12, 12, 'wpmf-category', '', 0, 0),
 (13, 13, 'wpmf-category', '', 0, 0),
-(14, 14, 'wpmf-category', '', 0, 1) ;
+(14, 14, 'wpmf-category', '', 0, 1),
+(15, 15, 'wpmf-category', '', 0, 1),
+(16, 16, 'category', '', 0, 0) ;
 
 #
 # End of data contents of table `wp_term_taxonomy`
@@ -990,7 +1010,7 @@ CREATE TABLE `wp_termmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `term_id` (`term_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -1000,7 +1020,9 @@ INSERT INTO `wp_termmeta` ( `meta_id`, `term_id`, `meta_key`, `meta_value`) VALU
 (5, 8, 'meta_order_taxonomy', '1'),
 (6, 8, 'meta_color_taxonomy', '#000000'),
 (7, 9, 'meta_order_taxonomy', '2'),
-(8, 9, 'meta_color_taxonomy', '#000000') ;
+(8, 9, 'meta_color_taxonomy', '#000000'),
+(9, 16, 'meta_order_taxonomy', '1'),
+(10, 16, 'meta_color_taxonomy', '#000000') ;
 
 #
 # End of data contents of table `wp_termmeta`
@@ -1027,7 +1049,7 @@ CREATE TABLE `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -1044,7 +1066,9 @@ INSERT INTO `wp_terms` ( `term_id`, `name`, `slug`, `term_group`) VALUES
 (11, 'PRODUCTOS', 'productos', 1),
 (12, 'PUBLICIDAD O IMAGEN', 'publicidad-o-imagen', 1),
 (13, 'MARCAS', 'marcas', 1),
-(14, 'NOSOTROS', 'nosotros', 1) ;
+(14, 'NOSOTROS', 'nosotros', 1),
+(15, 'ALQUILER', 'alquiler', 1),
+(16, 'Tema 1', 'tema-1', 0) ;
 
 #
 # End of data contents of table `wp_terms`
@@ -1091,13 +1115,13 @@ INSERT INTO `wp_usermeta` ( `umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
-(14, 1, 'session_tokens', 'a:2:{s:64:"026d6e529d76299629196e6d1f62bbd1c6973f48f6a7dae928db947ef8b49b3d";a:4:{s:10:"expiration";i:1476546892;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476374092;}s:64:"7e09d890452bc60eaf854fb06b1e11ecc6fbab182a3bf4d74d96a64c9792c6da";a:4:{s:10:"expiration";i:1476662655;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476489855;}}'),
+(14, 1, 'session_tokens', 'a:3:{s:64:"7e09d890452bc60eaf854fb06b1e11ecc6fbab182a3bf4d74d96a64c9792c6da";a:4:{s:10:"expiration";i:1476662655;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476489855;}s:64:"1011a235c0fa50880b0df82c23635d84f320f749d7d826c055b3e3896aee4c78";a:4:{s:10:"expiration";i:1476725765;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476552965;}s:64:"eaef9d99e5bd9f0d82a8fe1a8446e61c3d34722ed80432817ac39861def80e48";a:4:{s:10:"expiration";i:1476835070;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476662270;}}'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (16, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
 (17, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:12:"add-post_tag";}'),
 (18, 1, 'nav_menu_recently_edited', '4'),
-(19, 1, 'wp_user-settings', 'libraryContent=browse'),
-(20, 1, 'wp_user-settings-time', '1476394617'),
+(19, 1, 'wp_user-settings', 'libraryContent=browse&hidetb=1&editor=tinymce'),
+(20, 1, 'wp_user-settings-time', '1476572801'),
 (21, 1, 'closedpostboxes_page', 'a:0:{}'),
 (22, 1, 'metaboxhidden_page', 'a:6:{i:0;s:12:"revisionsdiv";i:1;s:10:"postcustom";i:2;s:16:"commentstatusdiv";i:3;s:11:"commentsdiv";i:4;s:7:"slugdiv";i:5;s:9:"authordiv";}') ;
 

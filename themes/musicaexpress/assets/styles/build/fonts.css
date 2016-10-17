@@ -51,4 +51,20 @@
     url('../../fonts/swiss/swiss721bold/swis721btbold.svg') format('svg'); /* Legacy iOS */  
   font-weight: normal;
   font-style : normal;
+
+}
+/*
+ * Swis721 BT Bold
+ */
+@font-face 
+{
+  font-family: 'Swis721BTLight';
+  src: url('../../fonts/swiss/swiss721ltex/swis721ltexbtlight.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/swiss/swiss721ltex/swis721ltexbtlight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/swiss/swiss721ltex/swis721ltexbtlight.woff2') format('woff2'), /* Modern Browsers */
+    url('../../fonts/swiss/swiss721ltex/swis721ltexbtlight.woff') format('woff'), /* Modern Browsers */
+    url('../../fonts/swiss/swiss721ltex/swis721ltexbtlight.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../../fonts/swiss/swiss721ltex/swis721ltexbtlight.svg') format('svg'); /* Legacy iOS */  
+  font-weight: normal;
+  font-style : normal;
 }

@@ -127,10 +127,21 @@ function scrollRevealElements()
 	//RollIn
 	sr.reveal('.sr-rollIn', { 
 		rotate   : { x:0 , y:1 , z:-120 },
-		translate: { x:-100 , y:0 , z:0 },
 		delay    : 200,
 		reset    : true,
 		duration : 600,
+	} , 50 );
+
+	//LightSpeedIn
+	sr.reveal('.sr-lightSpeedIn', { 
+		easing   : 'ease-out',
+		origin   : 'right',
+		distance : '50px',
+		scale    : 1,
+		delay    : 200,
+		reset    : true,
+		duration : 1000,
+
 	} , 50 );
 
 
