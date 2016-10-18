@@ -17,6 +17,9 @@ $the_title = isset($banner_title) && !empty($banner_title) ? $banner_title : $th
 //El id de banner
 $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_object_id();
 
+//Url de la imagen ( si existe la variable $banner_url_image )
+$banner_url_image = isset($banner_url_image) && !empty($banner_url_image) ? $banner_url_image : get_banner_page( $id_banner );
+
 
 /*
  * Renderizando el banner
@@ -28,8 +31,8 @@ $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_objec
 	<section class="pageCommon__topbanner posrelative">
 
 		<!-- Imagen -->
-		<figure style="background-image : url( <?= get_banner_page( $id_banner ) ?> )">
-			<img src="<?= get_banner_page( $id_banner ) ?>" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
+		<figure style="background-image : url( <?= $banner_url_image; ?> )">
+			<img src="<?= $banner_url_image; ?>" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
 		</figure>
 		
 		<!-- Título -->

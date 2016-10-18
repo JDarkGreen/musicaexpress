@@ -60,7 +60,7 @@ $admin_bar = is_admin_bar_showing() ? 'mainHeader__active-bar' : '';
  * Extraemos el logo de las opciones del tema
  */ 
 $logo_theme_url = get_header_image();
-$logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.jpg';
+$logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.png';
 
 ?>
 

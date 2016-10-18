@@ -32,6 +32,57 @@ function theme_add_num_order( $value_number = 1 )
         return $output_function_order;
 }
 
+/** CAMPO PERSONALIZADO IMÁGEN TAXONOMIA  **/
+function theme_add_image( $value_image = "" )
+{
+    ob_start(); //Encienda el búfer de salida ?>
+    <tr class="form-field">  
+        <th scope="row" valign="top">  
+            <label for="theme_tax_image"><?php _e('Asignar Imágen: '); ?></label> 
+        </th>   <!-- /.scope="row" -->
+        <td>
+
+            <!-- Input Oculto -->
+            <input type="hidden" id="theme_tax_image" name="theme_tax_image" value="<?= trim($value_image); ?>" />
+
+            <p class="description"> Añade una imagen para banner personalizado - !No te olvides ACTUALIZAR! para guardar los datos</p>
+
+            <!-- Contenedor Padre -->
+            <div class="customize-img-container">
+
+                <!-- Boton Agregar Elemento -->
+                <button class="button button-primary js-add-custom-img" data-type="image" data-field-id="theme_tax_image">
+                    <?= empty($value_image) ? 'Agregar Elemento' : 'Cambiar Elemento'; ?>
+                </button>  
+                
+                <!-- Espaciado -->
+                <div style="clear:both; height: 5px;"> </div>
+
+                <!-- Botón remover -->
+                <button class="button button-primary js-remove-custom-img" data-field-id="theme_tax_image">
+                    <?php _e( 'Remover Elemento' , LANG ); ?>
+                </button>
+
+                <!-- Contenedor Hijo -->
+                <div class="container-preview" style="background: rgba(0,0,0,.3); border: 1px dotted black; margin: 10px 0; text-align: center;">
+
+                    <?php if(!empty($value_image)) : ?>
+                        <img src="<?= $value_image; ?>" alt="" width="100%" height="auto" />
+                    <?php endif; ?>
+
+                </div>
+                
+            </div> <!-- /.customize-img-container -->
+
+        </td>
+
+    </tr> <!-- /.form-field -->
+    <?php
+        $output_function = ob_get_contents(); #Devolver el contenido del búfer de salida
+        ob_clean(); //Esta función desecha el contenido del búfer de salida. 
+        return $output_function;
+}
+
 
 /** CAMPO PERSONALIZADO COLOR TAXONOMIA  **/
 function theme_add_color( $value_color = "#000000" )
@@ -63,7 +114,12 @@ function theme_taxonomy_add_custom_fields()
     /**
     *  CAMPO PERSONALIZADO ORDEN
     **/
-    echo theme_add_num_order();
+    echo theme_add_num_order();    
+
+    /**
+    *  CAMPO PERSONALIZADO IMAGEN
+    **/
+    echo theme_add_image();
 
     /**
     * CAMPO PERSONALIZADO COLOR TAXONOMIA
@@ -84,6 +140,12 @@ function theme_taxonomy_edit_custom_fields( $term  ) {
     **/
     $value_order = get_term_meta( $term->term_id , 'meta_order_taxonomy' , true );
     echo theme_add_num_order( $value_order );
+
+    /**
+    *  CAMPO PERSONALIZADO IMÁGEN
+    **/
+    $value_order = get_term_meta( $term->term_id , 'meta_image_taxonomy' , true );
+    echo theme_add_image( $value_order );
 
     /**
     * CAMPO PERSONALIZADO COLOR TAXONOMIA
@@ -109,6 +171,15 @@ function save_taxonomy_custom_fields( $term_id ) {
     if ( isset($_POST['theme_tax_order']) ):
         #Actualizar valor
         update_term_meta( $term_id , 'meta_order_taxonomy' , $_POST['theme_tax_order'] );
+    endif;
+
+
+    /*|** [Campo Imágen] **|*/ 
+
+    #Si existe campo meta order
+    if ( isset($_POST['theme_tax_image']) ):
+        #Actualizar valor
+        update_term_meta( $term_id , 'meta_image_taxonomy' , $_POST['theme_tax_image'] );
     endif;
 
 

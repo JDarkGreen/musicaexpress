@@ -56,6 +56,26 @@
 			font-weight: 700  
 
 /*
+ * MENÚ DE CATEGORÍAS 
+ */
+.menu-categories-post
+	margin : 0 auto 15px
+	a.item-link
+		+transition( all 600ms ease )
+		background     : black 
+		border-bottom  : 2px solid #D6B400
+		color          : white 
+		display        : block 
+		font-family    : "Helvetica-Condensed-Light-Light"
+		font-size      : 17px 
+		line-height    : 1em
+		padding        : 13px 30px
+		text-decoration: none !important 
+		//hover and active 
+		&:hover , &.active 
+			color : #D6B400
+
+/*
  * PÁGINA BLOG 
  */
 #wrapperPageBlog

@@ -17,7 +17,7 @@ $options = get_option( 'theme_settings' );
 
 ?>
 
-	<footer id="main-footer" class="site-footer scroll-animate" role="contentinfo">
+	<footer id="main-footer" class="site-footer" role="contentinfo">
 
 		<!-- Wrapper Container  -->
 		<div class="wrapperContainer">
@@ -116,6 +116,8 @@ $options = get_option( 'theme_settings' );
 	</footer><!-- .site-footer -->
 
 </div><!-- .site -->
+
+<script> var url = "<?= THEMEROOT ?>"; </script>
 
 <?php wp_footer(); ?>
 

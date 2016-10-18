@@ -117,13 +117,14 @@
 					+transition( box-shadow 400ms ease-in-out )
 					background: none
 					display   : block 
+					margin    : 0
 					width     : 180px 
 					a 
 						color : white 
 						span 
 							+animation( translate-submenu-add 600ms ease-out )
 					//hover 
-					&:hover 
+					&:hover , &.current-menu-item
 						+box-shadow( inset 200px 0 0 0 #EDDD12 )
 						a 
 							color : black

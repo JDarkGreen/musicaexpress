@@ -91,7 +91,6 @@
 					if( $videos ) :
 
 					$video  = $videos[0];
-
 				?>
 
 				<!-- Video Frame -->

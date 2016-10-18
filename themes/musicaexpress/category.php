@@ -1,17 +1,13 @@
 <?php 
 /*
- * Template Name: Página Blog Plantilla
- */
-
-/*
- * Nota los nuevos filtros (como classtoparagraphs ) se encuentran en 
- * function/custom-function/custom-filters.php
+ * Template : Category php 
+ * Muestras la plantilla categorías por defecto
  */
 
 /*
  * Objecto Actual
  */
-global $post;
+$current_category = get_queried_object();
 
 /*
  * Mostrar Header
@@ -23,11 +19,13 @@ get_header();
  */
 
 $options = get_option("theme_settings");
+
 /*
  * Variable para Template banner de página
  */
+$page_blog = get_page_by_title('Blog');
 
-$banner = $post;
+$banner    = $page_blog;
 
 if( stream_resolve_include_path('partials/common/banner-top-page.php') ):
 	include('partials/common/banner-top-page.php');
@@ -45,6 +43,7 @@ $paged = get_query_var('paged') ? get_query_var('paged') : 1;
  */
 $args = array(
 	'posts_per_page' => $posts_per_page,
+	'cat'            => $current_category->term_id,
 	'post_type'      => 'post',
 	'order'          => 'DESC',
 	'orderby'        => 'date',
@@ -66,6 +65,11 @@ $the_query = new WP_Query($args);
 			<div class="col-xs-12 col-sm-8">
 
 				<main id="wrapperPageBlog">
+
+					<!-- Título -->
+					<h2 class="sectionTitle text-uppercase">
+						<?= __( $current_category->name , LANG ); ?>
+					</h2>
 					
 					<?php if($the_query->have_posts()): ?>
 						
@@ -107,7 +111,7 @@ $the_query = new WP_Query($args);
 					<?php else: ?>
 
 						<div class="alert alert-warning" role="alert">
-						  <strong> Ops!</strong> Por el momento nuestros post están en mantenimiento puedes ver otras páginas desde  <a href="<?= site_url(); ?>" class="alert-link"> aquí </a>.
+						  <strong> Ops!</strong> Por el momento la categoría se encuentra en mantenimiento puedes ver otras páginas desde  <a href="<?= site_url(); ?>" class="alert-link"> aquí </a>.
 						</div>
 
 					<?php endif; ?>

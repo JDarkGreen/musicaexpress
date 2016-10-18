@@ -10,6 +10,9 @@ global $post;
 $args = array(
 	'hide_empty' => false , 
 	'parent'     => 0,
+	'order'      => 'ASC',
+	'orderby'    => 'meta_value_num',
+	'meta_key'   => 'meta_order_taxonomy',
 );
 
 
@@ -19,7 +22,7 @@ $current_id = isset($id_current_actual) ? $id_current_actual : '';
 ?>
 
 
-<section>
+<section class="menu-categories-post">
 	
 	<!-- Título -->
 	<h2 class="sectionTitle text-uppercase"> <?= __(  'Categorías' , 'LANG' ); ?> </h2>
