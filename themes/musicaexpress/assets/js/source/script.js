@@ -103,7 +103,6 @@ function customOwlCarousels()
 }
 
 
-
 /*|----------------------------------------------------------------------|*/
 /*|-----  SCROLLREVEAL - animación on scroll   -----|*/
 /*|----------------------------------------------------------------------|*/
@@ -184,6 +183,105 @@ function sendDataFormularybyAjax( formulario )
 }
 
 
+/*|----------------------------------------------------------------------|*/
+/*|-----  MENU MOBILE - SLIDEROUT LIBRERIA  -----|*/
+/*|----------------------------------------------------------------------|*/
+
+function menuMobile()
+{
+	var slideoutLeft = new Slideout({
+		'menu'     : document.getElementById('layer-mobile-left'),
+		'panel'    : document.getElementById('page'),
+		'padding'  : 256,
+		'tolerance': 70,
+		'touch'    : false,
+	});
+
+	var slideoutRight = new Slideout({
+		'panel'    : document.getElementById('page'),
+		'menu'     : document.getElementById('layer-mobile-right'),
+		'side'     : 'right',
+		'touch'    : false,
+	});
+
+	/*
+	 * Selectores que despliegan los menus al hacer click
+	 */
+	if( j('.js-mobile-toggle').length ){
+		
+		var control = 0;
+		
+		j('.js-mobile-toggle').on('click' , function(e){
+
+			e.preventDefault();
+
+			//Referenciar elemento
+			var current_btn_menu = j(this);
+			//Dirección de menu
+			var layer_direction  = current_btn_menu.attr('data-layer-direction') !== null && typeof(current_btn_menu.attr('data-layer-direction') ) !== "undefined" ? current_btn_menu.attr('data-layer-direction') : '';
+
+			//Segun sea el caso
+			switch( String(layer_direction) )
+			{
+				case 'left':
+					slideoutLeft.toggle();
+				break;
+
+				case 'right':
+					slideoutRight.toggle();
+				break;
+
+				default:
+					return;
+				break;
+			}
+
+			//Abrir Header
+			if( control == 0 ){ 
+				current_btn_menu.find('i').removeClass('fa-bars').addClass('fa-times');
+
+				j('.slideout-menu,.fixed-slideout, #masthead').each( function(index){
+					
+					var the_id = j(this).attr('id');
+					
+					if( the_id !== 'layer-mobile-left' && String(layer_direction) == 'left' ){ 
+						j(this).addClass('fixed-slideout-open-left') 
+					}
+
+					if( the_id !== 'layer-mobile-right' && String(layer_direction) == 'right' ){ 
+						j(this).addClass('fixed-slideout-open-right') 
+					}					
+
+				});
+
+				control = 1;
+			}else{
+				current_btn_menu.find('i').removeClass('fa-times').addClass('fa-bars');
+
+				j('.slideout-menu,.fixed-slideout , #masthead').each( function(index){
+					
+					var the_id = j(this).attr('id');
+					
+					if( the_id !== 'layer-mobile-left' && String(layer_direction) == 'left' ){ 
+						j(this).removeClass('fixed-slideout-open-left') 
+					}
+
+					if( the_id !== 'layer-mobile-right' && String(layer_direction) == 'right' ){ 
+						j(this).removeClass('fixed-slideout-open-right') 
+					}					
+
+				});
+
+				control = 0;
+			}
+
+
+		});
+	}
+	
+}
+
+
 
 (function($){
 /*|- LIMITE --------------------------------------------------------------|*/
@@ -232,6 +330,10 @@ function sendDataFormularybyAjax( formulario )
 			sendDataFormularybyAjax( formulario );
 		}
 
+		/*
+		 *  Llamar a función menú mobile 
+		 */
+		menuMobile();
 
 
 	/*|- LIMITE ON READY  -----------------------------------------------*/

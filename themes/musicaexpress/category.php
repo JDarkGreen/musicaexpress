@@ -121,7 +121,7 @@ $the_query = new WP_Query($args);
 			</div> <!-- /.col-xs-12 col-sm-8 -->
 			
 			<!-- Sidebar -->
-			<aside class="col-xs-12 col-sm-4">
+			<aside class="col-sm-4 hidden-xs-down">
 
 				<!-- Categorias -->
 				<?php  
@@ -135,7 +135,7 @@ $the_query = new WP_Query($args);
 					<?php dynamic_sidebar( 'main-sidebar' ); ?>
 				<?php endif; ?>
 
-			</aside> <!-- /.col-xs-12 col-sm-4 -->
+			</aside> <!-- /.col-sm-4 hidden-xs-down-->
 			
 		</div> <!-- /.row -->
 	

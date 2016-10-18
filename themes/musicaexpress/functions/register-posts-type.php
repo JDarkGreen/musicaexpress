@@ -121,6 +121,35 @@ function create_post_type()
 	register_post_type( 'type-marcas' , $args_marcas );
 
 
+	/*|----- OFERTAS ----------------------|*/
+	
+	$labels_offers = array(
+		'name'               => __('Ofertas'),
+		'singular_name'      => __('Oferta'),
+		'add_new'            => __('Nueva Oferta'),
+		'add_new_item'       => __('Agregar nueva Oferta Principal'),
+		'edit_item'          => __('Editar Oferta'),
+		'view_item'          => __('Ver Oferta'),
+		'search_items'       => __('Buscar Oferta'),
+		'not_found'          => __('Oferta no encontrada'),
+		'not_found_in_trash' => __('Oferta no encontrada en la papelera'),
+	);
+
+	$args_offers = array(
+		'labels'      => $labels_offers,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => true,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
+		'show_ui' => true,
+		'taxonomies'  => array('post-tag'),
+		'menu_icon'   => 'dashicons-tickets-alt',
+	);
+	
+	#OFERTAS
+	register_post_type( 'type-offers' , $args_offers );
+
+
 
 
 	flush_rewrite_rules();

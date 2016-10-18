@@ -10,6 +10,7 @@
 #masthead
 	font-family: 'Helvetica-Condensed-Light-Light'
 	padding    : 11px 0 0 0
+	z-index    : 99999
 
 /*
  * Informacion
@@ -62,7 +63,7 @@
 	margin    : 10px 0 0 0
 	position  : relative 
 	z-index   : 999
-	ul#menu-menu-principal
+	ul.menu-menu-principal
 		list-style-type: none
 		margin         : 0 
 		padding        : 0
@@ -130,3 +131,28 @@
 							color : black
 							span 
 								+animation( translate-submenu 300ms ease-in )
+
+
+
+/*
+ * MOBILE SECTION 
+ */
+#headerMobile 
+	display : table
+
+.icon-header
+	font-size : 50px
+
+.item-header-mobile
+	display       : table-cell
+	vertical-align: middle 
+
+/*
+ * LAYER MOBILE 
+ */
+.layer-mobile
+	background: rgba(0,0,0,.7)
+	display   : none 
+	padding   : 20px 10px
+.layer-mobile--right
+	left : auto !important

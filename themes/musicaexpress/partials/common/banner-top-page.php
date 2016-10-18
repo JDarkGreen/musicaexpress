@@ -32,7 +32,7 @@ $banner_url_image = isset($banner_url_image) && !empty($banner_url_image) ? $ban
 
 		<!-- Imagen -->
 		<figure style="background-image : url( <?= $banner_url_image; ?> )">
-			<img src="<?= $banner_url_image; ?>" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto" />
+			<img src="<?= $banner_url_image; ?>" alt="<?php bloginfo('description') ?>" class="img-fluid d-block m-x-auto hidden-xs-down" />
 		</figure>
 		
 		<!-- Título -->

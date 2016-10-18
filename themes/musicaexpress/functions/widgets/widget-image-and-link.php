@@ -146,7 +146,7 @@ $allposts = get_posts( $args );
 			
 			echo $before_widget; ?>
 			
-			<div class="widget-image-and-link sr-perpective">
+			<div class="widget-image-and-link">
 			
 				<?php 
 				//Si tiene Link

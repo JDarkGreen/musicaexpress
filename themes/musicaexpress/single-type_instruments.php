@@ -152,6 +152,9 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			<!-- Sidebar -->
 			<aside class="col-xs-12 col-sm-4">
 
+				<!-- Espacio --> 
+				<div class="clearfix hidden-sm-up"><br /><br /></div>
+
 				<!-- Categorias -->
 				<?php  
 					if( stream_resolve_include_path('partials/common/categories-products.php') ):

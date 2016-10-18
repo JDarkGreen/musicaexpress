@@ -14,6 +14,11 @@ $args = array(
 	'order'          => 'ASC',
 	'orderby'        => 'meta_value_num',
 	'meta_key'       => 'mbox_order_tpost',
+	'meta_query'     => array(
+		'key'     => 'mb_marcas_check_slider',
+		'value'   => 'on',
+		'compare' => '='
+	),
 );
 
 $marcas = get_posts( $args );
@@ -41,7 +46,7 @@ $marcas_size = count($marcas);
 			if( ($marcas_size >= $min_num_marcas ) ):
 		?>
 		
-		<div id="carosel-marcas" class="js-carousel-gallery" data-items="<?= intval($min_num_marcas); ?>" data-items-responsive="1" data-margins="48" data-dots="true" data-autoplay="true" data-timeautoplay="5000">
+		<div id="carosel-marcas" class="js-carousel-gallery" data-items="<?= intval($min_num_marcas); ?>" data-items-responsive="2" data-margins="48" data-dots="true" data-autoplay="true" data-timeautoplay="5000">
 
 			<?php foreach( $marcas as $marca ): ?>
 

@@ -49,7 +49,7 @@
 			</div> <!-- /.col-xs-12 col-sm-8 -->
 
 			<!-- Aside -->
-			<aside class="col-xs-12 col-sm-4">
+			<aside class="col-sm-4 hidden-xs-down">
 
 				<?php if( is_active_sidebar( 'main-sidebar' ) ) : ?>
 					<?php dynamic_sidebar( 'main-sidebar' ); ?>
@@ -70,7 +70,7 @@
 					?>
 				</section>
 
-			</aside> <!-- /.col-xs-12 col-sm-4 -->
+			</aside> <!-- /.col-sm-4 hidden-xs-down-->
 			
 		</div> <!-- /.row -->
 		

@@ -3,6 +3,21 @@
  * Archivo partial que incluye la sección de miscelaneo
  * el blog y los videos
  */
+
+/*
+ * Funcion extraer id de youtube
+ */
+function id_youtube( $url )
+{
+	$patron = '%^ (?:https?://)? (?:www\.)? (?: youtu\.be/ | youtube\.com (?:/embed/ | /v/ | /watch\?v= ) ) ([\w-]{10,12}) $%x';
+
+	$array = preg_match( $patron, $url , $parte );
+
+	if( false !== $array ){ return $parte[1]; }
+	return false;
+}
+
+
 ?>
 
 <!-- Section -->
@@ -96,10 +111,15 @@
 				<!-- Video Frame -->
 				<?php 
 					$link_video = $video->post_content;
-					$link_video = str_replace( 'watch?v=' , 'embed/' , $link_video);
+					//$link_video = str_replace( 'watch?v=' , 'embed/' , $link_video);
+					//Colocar id de youtube
+					$link_video = id_youtube($link_video);
 				?> 
-				<iframe id="iframe-video-home" src="<?= $link_video; ?>" frameborder="0" allowfullscreen>
-				</iframe>
+
+				<div class="youtube" id="<?= $link_video; ?>" style="width: 100%; max-width:500px;height:281px;"></div>
+
+				<!--iframe id="iframe-video-home" src="<?= $link_video; ?>" frameborder="0" allowfullscreen>
+				</iframe-->
 
 				<?php endif; ?>
 

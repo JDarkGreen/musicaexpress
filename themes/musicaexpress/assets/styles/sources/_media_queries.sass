@@ -1,0 +1,124 @@
+
+
+/* 
+ * ARCHIVO SASS POSEE
+ * CONTENIDO Y/O RELACIONADO A LAS MEDIA QUERIES CSS PARA LA WEB
+ */
+
+@media( max-width : 568px )
+	
+	/* WRAPPER */
+	.wrapperContainer
+		padding : 0 15px
+
+
+	/* PÁGINAS / SECCIONES COMUNES */
+
+	#page 
+		padding : 35% 0 0 0
+
+	/* Banner a contacto - llamada */
+	#commonBannerPages
+		h2.title
+			font-size  : 19px
+			line-height: 1.2em 
+
+	/* HEADER */
+	#masthead
+		backface-visibility: hidden
+		background         : white
+		border-bottom      : 3px solid gray
+		left               : 0
+		position           : fixed
+		right              : 0
+		top                : 0
+		transition         : transform 300ms ease
+		z-index            : 2
+
+
+	/* MENÚ DE NAVEGACIÓN */
+
+	/* Superior */
+	.menu-top-header 
+		ul 
+			li
+				border-bottom: 1px solid 
+				display      : block
+				font-size    : 22px 
+				padding      : 15px 10px 
+				+transition( all 600ms ease-in )
+				//active u hover 
+				&.current-menu-item , &.current_page_item , &:hover 
+					background: #CCBE0F
+				a 
+					border : none
+					color : white  
+
+	/* Principal */
+	#main-navigation 
+		margin : 10px 20px
+		ul#menu-menu-principal 
+			li
+				background-position-x: 95%
+				display              : block 
+				margin               : 0
+				//Sub menu 
+				.sub-menu 
+					border : 1px solid white 
+					right  : 0
+				//hover 
+				&:hover 
+					.sub-menu 	
+						z-index : 9999
+
+
+	/* PÁGINA HOME */
+
+	/* Slider Home */
+	#carousel-home 
+		.contentTextSlider 
+			padding  : 0 15px !important
+			word-wrap: break-word
+			h2
+				font-size : 45px !important
+		//Flechas 
+		.tparrows , .tparrows:hover , .tparrows.active 
+			background: rgba(0,0,0,.2)
+
+	#btn-slider-home
+		font-size: 15px !important
+		margin   : 30px 0 0 0 !important
+		padding  : 15px 20px !important
+
+
+
+	/* PÁGINA OFERTAS */
+	.itemOffer 
+		.featured-image
+			height : 130px
+
+
+	/* PÁGINA MARCAS */
+	.featured-marcas
+		margin   : 0 auto 15px 
+		max-width: initial 
+
+
+	/* PÁGINA BLOG */
+	.itemPostPreview 
+		.featured-image
+			margin : 0 auto 15px
+		.link-to-post , .content-text
+			width : 100%
+
+
+	/* PÁGINA PRODUCTOS */
+	.itemProductPreview
+		margin   : 0 auto 15px 
+		max-width: initial 
+
+
+	/* FOOTER */
+	.mainFooter__item 
+		.content-item
+			padding : 17px 0

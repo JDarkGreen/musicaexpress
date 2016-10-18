@@ -52,3 +52,13 @@ endif;
 if( stream_resolve_include_path('metabox/product/mb_price_product.php') ):
 	include("metabox/product/mb_price_product.php");
 endif;
+
+
+/******************************************************************/
+/**- MARCAS **/
+/******************************************************************/
+
+/**[ INCLUIR METABOX DE MARCAS PARA SLIDER  ]**/
+if( stream_resolve_include_path('metabox/marcas/mb_check_slider.php') ):
+	include('metabox/marcas/mb_check_slider.php');
+endif;
