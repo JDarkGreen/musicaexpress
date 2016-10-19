@@ -16,6 +16,13 @@
 
 	$the_query = new WP_Query( $args );
 
+  /*
+   * Página Nosotros
+   */
+  $page_nosotros = get_page_by_title('nosotros');
+  $page_nosotros_link = !empty($page_nosotros) ? get_permalink($page_nosotros->ID) : '#';
+
+
 	// The Loop
 	if ( $the_query->have_posts() ) : 
 ?>
@@ -56,13 +63,8 @@
      					
      					<h2 class="text-uppercase"><?= get_the_title(); ?></h2>
 
-     					<!-- Botón a Contacto -->
-     					<?php  
-     						$page_contacto = get_page_by_title('Contactanos');
-     						$link_page_contacto = !empty($page_contacto) ? get_permalink($page_contacto->ID) : '#';
-     					?>
-              
-     					<a id="btn-slider-home" href="<?= $link_page_contacto; ?>" class="text-uppercase">
+     					<!-- Botón a Nosotros -->
+     					<a id="btn-slider-home" href="<?= $page_nosotros_link; ?>" class="text-uppercase">
      						<?= __( 'ver más' , LANG ); ?>
      					</a>
 
