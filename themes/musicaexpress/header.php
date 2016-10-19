@@ -130,7 +130,7 @@ $logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.
 				 */
 				if( isset($options['theme_cel_text_1']) ): ?>
 
-				<i class="fa fa-mobile" aria-hidden="true"></i>
+				<!--i class="fa fa-mobile" aria-hidden="true"></i-->
 				<span><?= ' ' . $options['theme_cel_text_1']; ?></span>
 			<?php endif;
 
