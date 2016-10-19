@@ -29,7 +29,7 @@ $options = get_option("theme_settings");
  */
 
 $terms    = wp_get_post_terms( $post->ID , 'category_instruments' );
-$the_term =  $the_parent = '';
+$the_term = $the_parent = '';
 
 foreach( $terms as $term ):
 	//verificar si no es padre
@@ -53,7 +53,7 @@ endif;
  */
 
 //Título
-$banner_title = isset($the_parent) ? $the_parent->name : $post->post_title;
+$banner_title = isset($the_parent) && !empty($the_parent) ? $the_parent->name : $post->post_title;
 
 
 //Imagen
