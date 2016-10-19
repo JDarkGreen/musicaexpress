@@ -119,6 +119,11 @@ $logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.
 
 		<!-- Información de empresa -->
 		<div id="information-top" class="pull-xs-right">
+			
+			<i id="icon-whatsapp">
+				<img src="<?= IMAGES ?>/whatsapp-icon.png" alt="whatsapp-web-musica-express" class="img-fluid m-x-auto" />
+			</i>
+
 			<?php  
 				/*
 				 * Número de Celular
