@@ -103,58 +103,80 @@ $the_query = new WP_Query($args);
 
 					<div class="row">
 						
-					<?php while($the_query->have_posts()): $the_query->the_post(); ?>
+						<?php while($the_query->have_posts()): $the_query->the_post(); ?>
 
-						<div class="col-xs-12 col-sm-4">
-	
-							<article class="itemProductPreview scroll-animate">
+							<div class="col-xs-12 col-sm-4">
+		
+								<article class="itemProductPreview scroll-animate">
 
-								<!-- Imagen Destacada -->
-								<?php 
-									if( has_post_thumbnail() ) :
-										$attachment = get_post( get_post_thumbnail_id() );
-										$url_image  = $attachment->guid; 
-									    $image_alt  = get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true );
-									else: 
-										$url_image  = IMAGES . '/default_product.jpg';
-										$image_alt  = get_the_title(); 
-									endif;
-								?>
-
-								<a href="<?= get_permalink() ?>">
-								<figure class="featured-image flexible align-items-center posrelative">
-										<img src="<?= $url_image; ?>" alt="<?= $image_alt; ?>" class="img-fluid d-block m-x-auto" /> 
-								</figure> <!-- /. end of image -->
-								</a>
-
-								<div class="contentText text-xs-center">
-
-									<!-- Título -->
-									<h2 class="text-uppercase"> <?= get_the_title(); ?></h2>
-
-									<!-- Precio -->
+									<!-- Imagen Destacada -->
 									<?php 
-										$current_price = get_post_meta( get_the_ID() , 'product_price' , true  ); 
-										$class_price = !empty($current_price['offer']) ? 'strike-text' : '';
+										if( has_post_thumbnail() ) :
+											$attachment = get_post( get_post_thumbnail_id() );
+											$url_image  = $attachment->guid; 
+										    $image_alt  = get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true );
+										else: 
+											$url_image  = IMAGES . '/default_product.jpg';
+											$image_alt  = get_the_title(); 
+										endif;
 									?>
-									<span class="price-normal <?= $class_price; ?>"> 
-										<?= !empty($current_price['normal']) ? $current_price['normal'] : '' ?>
-									</span> <!--  -->
 
-									<span class="price-offer"> <?= !empty($current_price['offer']) ? $current_price['offer'] : ''; ?></span> <!--  -->
+									<a href="<?= get_permalink() ?>">
+									<figure class="featured-image flexible align-items-center posrelative">
+											<img src="<?= $url_image; ?>" alt="<?= $image_alt; ?>" class="img-fluid d-block m-x-auto" /> 
+									</figure> <!-- /. end of image -->
+									</a>
 
-									<!-- Limpiar floats --> <div class="clearfix"></div>
+									<div class="contentText text-xs-center">
 
-									<!-- Boton Detalle -->
-									<a href="<?= get_permalink() ?>" class="btnShowMoreCommon text-uppercase"> <?= __('ver detalle'); ?> </a>
-									
-								</div> <!-- /.contentText -->
+										<!-- Título -->
+										<h2 class="text-uppercase"> <?= get_the_title(); ?></h2>
 
-							</article> <!-- /.itemProductPreview -->
+										<!-- Precio -->
+										<?php 
+											$current_price = get_post_meta( get_the_ID() , 'product_price' , true  ); 
+											$class_price = !empty($current_price['offer']) ? 'strike-text' : '';
+										?>
+										<span class="price-normal <?= $class_price; ?>"> 
+											<?= !empty($current_price['normal']) ? $current_price['normal'] : '' ?>
+										</span> <!--  -->
+
+										<span class="price-offer"> <?= !empty($current_price['offer']) ? $current_price['offer'] : ''; ?></span> <!--  -->
+
+										<!-- Limpiar floats --> <div class="clearfix"></div>
+
+										<!-- Boton Detalle -->
+										<a href="<?= get_permalink() ?>" class="btnShowMoreCommon text-uppercase"> <?= __('ver detalle'); ?> </a>
+										
+									</div> <!-- /.contentText -->
+
+								</article> <!-- /.itemProductPreview -->
+								
+							</div> <!-- /.col-xs-12 col-sm-4 -->					
+
+						<?php endwhile; ?>
+						
+						<!-- Espacio -->
+						<div class="d-block clearfix"></div>
+
+						<!-- Paginación -->
+						<section class="sectionPagination text-xs-center">
+
+							<?php $max_pages = $the_query->max_num_pages; ?>
 							
-						</div> <!-- /.col-xs-12 col-sm-4 -->					
+							<?php for( $i = 1 ; $i <= $max_pages ; $i++ ) { ?>
+							
+							<!-- Link -->
+							<a href="<?= get_pagenum_link($i); ?>" class="<?= $paged == $i ? 'active' : '' ?>"> <?= $i ?></a>
 
-					<?php endwhile; ?>
+							<?php } ?>
+							
+							<!-- Next -->
+							<a href="<?= get_pagenum_link($paged+1); ?>" class="<?= $paged == $max_pages ? 'disabled' : '' ?>" role="button" aria-disabled="<?= $paged == $max_pages ? 'true' : '' ?>">
+								<!-- Icon --><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+							</a>
+							
+						</section> <!-- /.sectionPagination -->
 
 					</div> <!-- /end of row -->
 

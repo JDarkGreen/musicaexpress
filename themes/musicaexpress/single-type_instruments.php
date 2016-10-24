@@ -94,7 +94,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 						<div class="col-xs-12 col-sm-6">
 
 							<figure class="featured-image flexible align-items-center">
-								<a href="<?= $url_img ?>" title="<?= $post->post_title; ?>" class="gallery-fancybox">
+								<a href="<?= $url_img ?>" title="<?= $post->post_title; ?>" class="gallery-fancybox d-block m-x-auto">
 
 									<?= get_the_post_thumbnail( $post->ID , 'full' , array('class'=>'img-fluid d-block m-x-auto') ); ?>
 
