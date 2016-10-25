@@ -22,6 +22,10 @@
 	if( stream_resolve_include_path('partials/common/partial-banner-common.php') ):
 		include('partials/common/partial-banner-common.php');
 	endif;
+
+	/*
+	 * Variables de Paginación
+	 */
 ?>
 
 

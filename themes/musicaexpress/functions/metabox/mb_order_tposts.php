@@ -90,10 +90,19 @@ function getIdFromMetaboxOrder( $mb_order )
 			),
 		),
 	);
-	$items    = get_posts( $args );
-	$the_item = $items[0];
 
-	return $the_item->ID;
+	$items = get_posts( $args );
+
+	if( empty($items) ) :
+		
+		return false;
+	
+	else:
+
+		$the_item = $items[0];
+		return $the_item->ID;
+
+	endif;
 }
 
 /*

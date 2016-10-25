@@ -10,7 +10,7 @@
  */
 $posts_per_page = 12;
 
-$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+$paged = get_query_var('page') ? get_query_var('page') : 1;
 
 /*
  *Obtener todos los productos destacados y ofertas
