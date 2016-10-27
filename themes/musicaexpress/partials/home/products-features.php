@@ -59,7 +59,7 @@ $the_query = new WP_Query( $args );
 		<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
 		
 		<!-- Artículo -->
-		<article class="itemProductPreview scroll-animate">
+		<article class="itemProductPreview">
 
 			<!-- Imagen Destacada -->
 			<?php 
