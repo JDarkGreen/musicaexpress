@@ -36,7 +36,28 @@ $options = get_option("theme_settings");
  * Imágen de banner
  */
 
-$image_post_meta  = get_term_meta( $current_term_id , 'meta_image_taxonomy' , true );
+/*
+ * Si no la tiene el padre (categoria super padre )
+ * entonces la asignamos al hijo y si no tiene lo dejamos con un
+ * banner por default
+ */
+
+/*
+ * Obtener Super Categoría Padre
+ */
+$ancestors = get_ancestors( $current_term_id , 'category_instruments' );
+//Super taxonomía padre (su ID)
+$super_taxonomy_id = count($ancestors) >= 1 ? end($ancestors) : false;
+
+//Extraer la imagen de la taxonomia super
+$image_post_meta   = !empty($super_taxonomy_id) ? get_term_meta( $super_taxonomy_id , 'meta_image_taxonomy' , true ) : false;
+
+//en caso de no tener imagen la taxonomía super entonces
+//acudimos a la imagen de la taxonomía actual
+$image_post_meta  = $image_post_meta !== false ? $image_post_meta : get_term_meta( $current_term_id , 'meta_image_taxonomy' , true );
+
+//Por ultimo seteamos en la variable url banner que pasa como parametro
+//al banner principal
 $banner_url_image = isset($image_post_meta) && !empty($image_post_meta) ? $image_post_meta : IMAGES . '/sample_banner.jpg';
 
 //Título

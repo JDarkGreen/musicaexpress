@@ -95,8 +95,10 @@
 						+animation( main-menu 200ms ease-in )
 				//submenu 
 				.sub-menu 
-					top : 100%
 					+opacity(1)
+					top       : 100%
+					visibility: visible 
+					z-index   : 99
 
 			a 
 				color                      : white 
@@ -121,6 +123,8 @@
 				position  : absolute 
 				text-align: left 
 				top       : 0
+				visibility: hidden
+				z-index   : -999
 				li 
 					+transition( box-shadow 400ms ease-in-out )
 					background: none

@@ -40,6 +40,8 @@ foreach( $terms as $term ):
 	endif;
 endforeach;
 
+
+
 //Link del Término
 $the_term_link = isset($the_term) && !empty($the_term) ? get_term_link($the_term) : '#';
 
@@ -47,6 +49,7 @@ $the_term_link = isset($the_term) && !empty($the_term) ? get_term_link($the_term
 if( isset($the_parent) && !empty($the_parent) ):
 	$image_post_meta = get_term_meta( $the_parent->term_id , 'meta_image_taxonomy' , true );
 endif;
+
 
 /*
  * Variable para Template banner de página
