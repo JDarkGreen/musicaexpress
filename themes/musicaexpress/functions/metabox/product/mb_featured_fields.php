@@ -64,9 +64,9 @@ function cd_mb_product_featured_save( $post_id )
      
     // Make sure your data is set before trying to save it
     if( isset($_POST['mb_product_featured']) ) :
-
         update_post_meta( $post_id, 'mb_product_featured' , $_POST['mb_product_featured'] );
-
+    else: 
+        update_post_meta( $post_id, 'mb_product_featured' , '' );
     endif;
 
 }
