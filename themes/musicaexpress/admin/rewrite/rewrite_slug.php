@@ -10,7 +10,7 @@ function get_all_taxonomies()
 	#Obtener todas los parametros personalizados;
 	global $options;
 
-	var_dump($options);
+	//var_dump($options);
 
 	$all_taxonomies = get_taxonomies();
 	#excluir taxonomias
@@ -27,8 +27,12 @@ function get_all_taxonomies()
 		
 		#Hacemos los cambios correspondientes
 		$custom_tax_args->show_admin_column = true;
+
 		#Seteamos el nuevo slug personalizado 
-		$custom_tax_args->rewrite['slug']  = $options['theme_rewriteurl'][$tax];
+		if( isset( $options['theme_rewriteurl'][$tax] ) ):
+			$custom_tax_args->rewrite['slug']  = $options['theme_rewriteurl'][$tax];
+		endif;
+
 		$custom_tax_args->rewrite['with_front'] = false;
 
 		// re registramos nuevamente la taxonomía

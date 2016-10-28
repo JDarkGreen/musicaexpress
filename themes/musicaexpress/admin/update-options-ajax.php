@@ -16,11 +16,10 @@ $options_theme = array();
 
 $post_options_theme = isset( $_POST['options_theme'] ) ?  $_POST['options_theme'] : array();
 
-
 /** Combinar en un solo array **/
 for ( $i=0; $i < count($post_options_theme) ; $i++) 
 { 
-	$options_theme = array_merge( $options_theme , $post_options_theme[$i] );
+	$options_theme = array_merge_recursive( $options_theme , $post_options_theme[$i] );
 }
 
 /** actualizacion */
@@ -28,13 +27,10 @@ for ( $i=0; $i < count($post_options_theme) ; $i++)
 //Combinar los dos arrays
 $options_updated = array_merge( $options , $options_theme );
 
-#var_dump($options_theme);
 
 //Actualizar Opciones
 update_option( 'theme_settings' , $options_updated );
 
-#echo json_encode($options_updated );
-echo json_encode("actualización completa");
-
-
-?>
+//var_dump($options_theme);
+//echo json_encode($options);
+echo json_encode( "actualización completa" );

@@ -33,7 +33,23 @@ var j = jQuery.noConflict();
 				var current_name = j(this).attr('id');
 				var current_val  = j(this).val();
 
-				options[index] = { [current_name] : current_val };
+				//Si hay una subopción entonces agregarla 
+				var suboption = typeof( j(this).attr('data-suboption') ) !== 'undefined' && j(this).attr('data-suboption') !== '' ? j(this).attr('data-suboption') : false; 
+
+				// Agregar
+				if( suboption )
+				{
+					
+					options[index] = { 
+						[current_name] : { [suboption] : current_val } 
+					};
+
+				}else{
+					
+					//Solo agregar la opción principal	
+					options[index] = { [current_name] : current_val };
+				}
+
 			});
 
 			/**

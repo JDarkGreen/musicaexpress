@@ -30,13 +30,18 @@ function theme_rewriteurl_render()
 	<h3> TAXONOMÍAS PERSONALIZADAS </h3>
 
 	<table>
+		<tr> 
+			<td><b><u>ORIGINAL</u></b></td> 
+			<td><b><u>ACTUAL</u></b></td> 
+		</tr>
+
 		<?php foreach( $all_taxonomies as $tax ) : 
-			#var_dump( get_taxonomy( $tax ) );
-		?>
+		#var_dump( get_taxonomy( $tax ) ); ?>
+
 		<tr>
 			<td> <label><b> <?= $tax ?> </b></label> </td>
 			<td> 
-				<input type='text' id='[theme_rewriteurl][<?= $tax ?>]' class='js-field-ajax' value='<?= !empty($options['theme_rewriteurl'][$tax]) ? $options['theme_rewriteurl'][$tax] : $tax; ?>'>
+				<input type='text' id='theme_rewriteurl' data-suboption="<?= $tax ?>" class='js-field-ajax' value='<?= !empty($options['theme_rewriteurl'][$tax]) ? $options['theme_rewriteurl'][$tax] : $tax; ?>'>
 			</td>
 		</tr>
 		<?php endforeach; ?>
@@ -58,13 +63,18 @@ function theme_rewriteurl_render()
 	?>
 
 	<table>
+		<tr> 
+			<td><b><u>ORIGINAL</u></b></td> 
+			<td><b><u>ACTUAL</u></b></td> 
+		</tr>
+
 		<?php foreach( $custom_post_types as $post_type ) : 
-			#var_dump( get_taxonomy( $tax ) );
-		?>
+			#var_dump( get_taxonomy( $tax ) );?>
+
 		<tr>
 			<td> <label><b> <?= $post_type ?> </b></label> </td>
 			<td> 
-				<input type='text' id='[theme_rewriteurl][<?= $post_type ?>]' class='js-field-ajax' value='<?= !empty($options['theme_rewriteurl'][$post_type]) ? $options['theme_rewriteurl'][$post_type] : $post_type; ?>'>
+				<input type='text' id='theme_rewriteurl' data-suboption="<?= $post_type ?>" class='js-field-ajax' value='<?= !empty($options['theme_rewriteurl'][$post_type]) ? $options['theme_rewriteurl'][$post_type] : $post_type; ?>'>
 			</td>
 		</tr>
 		<?php endforeach; ?>

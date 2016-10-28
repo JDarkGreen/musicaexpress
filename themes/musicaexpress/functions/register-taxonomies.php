@@ -33,7 +33,6 @@ function create_category_taxonomy()
     'show_ui'          => true,
     'show_admin_column'=> true,
     'query_var'        => true,
-    'rewrite'          => array( 'slug' => 'instrumentos' ),
   ));  
 
 
