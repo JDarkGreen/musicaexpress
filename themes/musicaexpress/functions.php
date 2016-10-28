@@ -58,6 +58,13 @@ if( stream_resolve_include_path('admin/assets/custom-scripts.php') ):
   include('admin/theme-customizer-modal.php');
 endif;
 
+/*------------------------------------------------------------------*
+* Customizar Urls
+*------------------------------------------------------------------*/
+if( stream_resolve_include_path('admin/rewrite/rewrite_slug.php') ):
+  include('admin/rewrite/rewrite_slug.php');
+endif;
+
 
 /*******************************************************************/
 /* 	Archivos de Condiguración en el Tema  */

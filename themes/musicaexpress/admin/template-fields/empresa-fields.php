@@ -18,6 +18,7 @@ add_settings_field( 'theme_phone_text_1', __( 'Numero Telefono 1', 'LANG' ), 'cu
 //Renderizado 
 function custom_phone_render() 
 { 
+
 	$options = get_option( 'theme_settings' ); 
 	?>
 	<input type='text' id='theme_phone_text_1' class='js-field-ajax' value='<?= !empty($options['theme_phone_text_1']) ? $options['theme_phone_text_1'] : "" ; ?>'>
