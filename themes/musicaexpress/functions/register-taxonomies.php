@@ -27,7 +27,7 @@ function create_category_taxonomy()
   ); 
 
   // Ahora registramos esta taxonomia
-  register_taxonomy('category_instruments',array('type_instruments'), array(
+  register_taxonomy('category_instruments', array('type_instruments') , array(
     'hierarchical'     => true,
     'labels'           => $labels_instrumentos,
     'show_ui'          => true,

@@ -24,9 +24,13 @@ function get_all_taxonomies()
 
 		#datos de la taxonomía
 		$custom_tax_args = get_taxonomy( $tax  );
-		
+
 		#Hacemos los cambios correspondientes
 		$custom_tax_args->show_admin_column = true;
+
+		#Guardamos para luego setear al tipo de custom post 
+		#al que pertenece
+		$array_post_types = $custom_tax_args->object_type;		
 
 		#Seteamos el nuevo slug personalizado 
 		if( isset( $options['theme_rewriteurl'][$tax] ) ):
@@ -36,7 +40,7 @@ function get_all_taxonomies()
 		$custom_tax_args->rewrite['with_front'] = false;
 
 		// re registramos nuevamente la taxonomía
-    	register_taxonomy( $tax , '' , (array) $custom_tax_args );
+    	register_taxonomy( $tax , (array)$array_post_types , (array) $custom_tax_args );
 
 	endforeach;
 
