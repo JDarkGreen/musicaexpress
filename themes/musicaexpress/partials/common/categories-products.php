@@ -66,10 +66,12 @@ endforeach;
 $the_parent = $current_object->parent !== '' ? get_term( $current_object->parent , $the_taxonomy ) : $the_parent;
 
 
+#var_dump($the_parent->errors);
+
 /*
  * Si hay un padre
  */
-if( $the_parent !== '' && !empty($the_parent) ) : ?> 
+if( count($the_parent->errors) < 1 && $the_parent !== '' && !empty($the_parent) ) : ?> 
 	
 <!-- Sección -->
 <section class="menu-categories-post">
