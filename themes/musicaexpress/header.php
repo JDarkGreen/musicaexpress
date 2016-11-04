@@ -120,10 +120,10 @@ $logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.
 
 <header id="masthead" class="site-header" role="banner">
 
-	<div class="wrapperContainer">
+	<div class="wrapperContainer posrelative">
 
 		<!-- Información de empresa -->
-		<div id="information-top" class="pull-xs-right">
+		<div id="information-top" class="">
 			
 			<i id="icon-whatsapp">
 				<img src="<?= IMAGES ?>/whatsapp-icon.png" alt="whatsapp-web-musica-express" class="img-fluid m-x-auto" />
@@ -148,8 +148,6 @@ $logo_theme_url = !empty( $logo_theme_url ) ? $logo_theme_url : IMAGES . '/logo.
 				endif;
 			?>
 		</div> <!-- /.information-top -->
-
-		<!-- LIMPIAR FLOATS --> <div class="clearfix"></div>
 
 		<!-- Menu Header Desktop -->
 		<section class="flexible justify-center align-baseline hidden-xs-down">
