@@ -103,16 +103,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 								</a> <!-- / -->
 							</figure>
-							
-						</div> <!-- /.col-xs-12 col-sm-6 -->
 
-						<!-- Texto  -->
-						<div class="col-xs-12 col-sm-6">
-
-							<h3 class="title-product"> <?= $post->post_title; ?> </h3>
-
-							<?= apply_filters( 'the_content' , $post->post_content ); ?>
-							
 							<?php 
 								$mb_price = get_post_meta( $post->ID , 'product_price' );
 								$mb_price = isset($mb_price) && !empty($mb_price) ? $mb_price[0] : '';
@@ -124,8 +115,17 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 							<?php endif; ?>
 
 							<?php if( isset($mb_price['offer']) && !empty($mb_price['offer']) ) : ?>
-							<span class="price-product d-block"> Ahora a : <?= $mb_price['offer']; ?> </span>
+							<span class="price-product price-offer d-block"> Ahora a : <?= $mb_price['offer']; ?> </span>
 							<?php endif; ?>
+							
+						</div> <!-- /.col-xs-12 col-sm-6 -->
+
+						<!-- Texto  -->
+						<div class="col-xs-12 col-sm-6">
+
+							<h3 class="title-product"> <?= $post->post_title; ?> </h3>
+
+							<?= apply_filters( 'the_content' , $post->post_content ); ?>
 
 							<br />
 
