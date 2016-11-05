@@ -16,7 +16,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-	<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
+	<title><?php wp_title('|', true, 'right'); ?></title>
 
 	<?php  
 		$mb_descrption = get_post_meta( get_the_ID() , '_yoast_wpseo_metadesc' , true );
